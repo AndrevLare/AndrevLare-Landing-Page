@@ -1,0 +1,195 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AndrevLare | Desarrollo Web</title>
+
+    {# archivos estáticos #}
+    <link
+      rel="shortcut icon"
+      href="{% static 'img/AndrevLare/cubic-LogoAndrevLareTextLess.ico' %}"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/4271bf6616.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Header-->
+    <header class="header">
+      <img
+        src="{% static 'img/AndrevLare/cubic-LogoAndrevLareTextLess.png' %}"
+        alt="AndrevLareIcon"
+        title="AndrevLare Icon"
+        class="header--img"
+      />
+      <span class="header--span">AndrevLare</span>
+      <nav class="header__nav">
+        <ul class="header__nav__ul">
+          <li class="header__nav__ul--li">Contacto</li>
+          <li class="header__nav__ul--li">Servicios</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Main-->
+    <main class="main">
+      <article class="main__home">
+        <img
+          src="{% static 'img/sculture.png' %}"
+          alt="GreekStatue"
+          title="MainImage"
+          class="main__home--img"
+        />
+        <h1 class="main__home--h1">AndrevLare <span>Web-Deb</span></h1>
+        <button class="main__home--button">Contáctame</button>
+        <p class="main__home--p">
+          En AndrevLare, se diseñan sitios web que conectan con tu público y
+          hacen crecer tu negocio. Potencia tu presencia en línea con
+          creatividad y soluciones a tu medida.
+        </p>
+      </article>
+
+      <!--Social Media-->
+      <article class="main__social-media">
+        <p class="main__social-media--p">
+          ¡Sigeme en todas mis redes o contáctame por ellas!
+        </p>
+        <ul class="main__social-media__ul">
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-threads"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-whatsapp"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-regular fa-envelope"></i>
+          </li>
+        </ul>
+      </article>
+
+      <!--CTA-->
+      <article class="main__CTA">
+        <section class="main__CTA__section">
+          <h2 class="main__CTA__section--h2">¡Tener Una Web Si Importa!</h2>
+          <ul class="main__CTA__section__ul">
+            <li class="main__CTA__section__ul--li">reason1</li>
+            <li class="main__CTA__section__ul--li">reason2</li>
+            <li class="main__CTA__section__ul--li">reason3</li>
+            <li class="main__CTA__section__ul--li">reason4</li>
+            <li class="main__CTA__section__ul--li">reason5</li>
+            <li class="main__CTA__section__ul--li">reason6</li>
+          </ul>
+        </section>
+        <section class="main__CTA__form">
+          <h2 class="main__CTA__form--h2">
+            Lleva tu presencia en línea a otro nivel
+          </h2>
+          <form method="post" class="main__CTA__form__form">
+            {% csrf_token %}
+
+            <label for="name">Tu nombre</label>
+            <input name="name" id="name" type="text" placeholder="AndrevLare" />
+            <label for="mail">Tu correo</label>
+            <input
+              name="mail"
+              id="mail"
+              type="mail"
+              placeholder="ejemplo@gmail.com"
+            />
+            <label for="message">Mensaje</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="¡Hablame de como deseas llevar negocio o marca al siguiente nivel!"
+            ></textarea>
+            <input type="submit" />
+          </form>
+        </section>
+      </article>
+
+      <!--Portfolio-->
+      <article class="main__portfolio">
+        <h3 class="main__portfolio--h3">Echale un vistazo a mis proyectos</h3>
+        <span class="main__portfolio--span">Mi Portfolio</span>
+      </article>
+
+      <!--Services-->
+      <article class="main__services">
+        <h3 class="main__services--h3">Mis Servicios</h3>
+        <section class="main__services__section">
+          <div class="main__services__section__div"></div>
+          <div class="main__services__section__div"></div>
+          <div class="main__services__section__div"></div>
+          <div class="main__services__section__div"></div>
+          <button class="main__services__section--button">
+            Haz una cotización
+          </button>
+        </section>
+      </article>
+
+      <!--Phrase-->
+      <article class="main__phrase">
+        <span class="main__phrase--span"
+          >"Yo no programo para solucionar problemas, programo para crear
+          soluciones"</span
+        >
+      </article>
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+      <img
+        src="{% static 'img/AndrevLare/LogoAndrevLareBGLess.webp' %}"
+        alt="LogoAndrevLare"
+        title="Logo AndrevLare"
+        class="footer--img"
+      />
+      <ul class="footer__ul">
+        <li class="footer__ul--li">Home</li>
+        <li class="footer__ul--li">Contacto</li>
+        <li class="footer__ul--li">Servicios</li>
+      </ul>
+      <section class="footer__section">
+        <h4 class="footer__section--h4">Medios de contacto</h4>
+        <ul class="footer__section_ul">
+          <li class="footer__section__ul--li">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="footer__section__ul--li">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+          <li class="footer__section__ul--li">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="footer__section__ul--li">
+            <i class="fa-brands fa-whatsapp"></i>
+          </li>
+          <li class="footer__section__ul--li">
+            <i class="fa-regular fa-envelope"></i>
+          </li>
+        </ul>
+      </section>
+      <span class="footer--span"
+        >Sitio web de AndrevLare ©2024 Todos los Derechos Reservados | El sitio
+        no usa cookies</span
+      >
+    </footer>
+  </body>
+</html>
