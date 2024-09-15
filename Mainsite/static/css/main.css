@@ -1,0 +1,111 @@
+@import url(variables.css);
+
+/* HTML*/
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--main-black);
+}
+img {
+  max-width: 100vw;
+}
+
+/* Header */
+.header {
+  background-color: var(--main-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--main-white);
+  height: 4rem;
+  position: sticky;
+  top: 0;
+}
+.header__div {
+  display: flex;
+  align-items: center;
+}
+.header__div--img {
+  height: 3rem;
+  margin-inline: 1rem 0.5rem;
+}
+.header__div--span {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+.header__nav__button {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 2rem;
+  width: 2.5rem;
+  padding: 0;
+  margin-inline: 1rem;
+}
+.header__nav__button--span {
+  width: 100%;
+  height: 0.35rem;
+  background-color: var(--main-white);
+  border-radius: 1rem;
+}
+.header__nav__ul {
+  display: none;
+  list-style: none;
+}
+
+/* Main */
+/*.main {
+  display: flex;
+}*/
+
+/* Home */
+.main__home {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-black);
+}
+.main__home__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__home__div--img {
+  width: 85vw;
+}
+.main__home__div--span {
+  background-color: var(--green);
+  padding: 0.75rem;
+  border-radius: 50%;
+  font-family: "Roboto", system-ui;
+  font-weight: 900;
+  font-style: normal;
+  color: var(--main-black);
+  font-size: 3.5vw;
+  transform: rotate(15deg);
+  position: absolute;
+  top: 29rem;
+  left: 3rem;
+}
+.main__home--h1 {
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: var(--green);
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+  line-height: 3rem;
+}
+.main__home--h1 span {
+  color: var(--main-white);
+  font-size: 2.5rem;
+  font-weight: 600;
+}

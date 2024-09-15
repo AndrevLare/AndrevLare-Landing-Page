@@ -8,50 +8,67 @@
     <title>AndrevLare | Desarrollo Web</title>
 
     {# archivos estáticos #}
+    <!--Icons-->
     <link
       rel="shortcut icon"
       href="{% static 'img/AndrevLare/cubic-LogoAndrevLareTextLess.ico' %}"
       type="image/x-icon"
     />
+
+    <!--scripts-->
     <script
       src="https://kit.fontawesome.com/4271bf6616.js"
       crossorigin="anonymous"
     ></script>
+
+    <!--css-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
   </head>
   <body>
     <!--Header-->
     <header class="header">
-      <img
-        src="{% static 'img/AndrevLare/cubic-LogoAndrevLareTextLess.png' %}"
-        alt="AndrevLareIcon"
-        title="AndrevLare Icon"
-        class="header--img"
-      />
-      <span class="header--span">AndrevLare</span>
+      <div class="header__div">
+        <img
+          src="{% static 'img/AndrevLare/cubic-LogoAndrevLareTextLess.png' %}"
+          alt="AndrevLareIcon"
+          title="AndrevLare Icon"
+          class="header__div--img"
+        />
+        <span class="header__div--span">AndrevLare</span>
+      </div>
       <nav class="header__nav">
         <ul class="header__nav__ul">
+          <li class="header__nav__ul--li">Inicio</li>
           <li class="header__nav__ul--li">Contacto</li>
           <li class="header__nav__ul--li">Servicios</li>
         </ul>
+        <button class="header__nav__button">
+          <span class="header__nav__button--span menu-bars-1"></span>
+          <span class="header__nav__button--span menu-bars-2"></span>
+          <span class="header__nav__button--span menu-bars-3"></span>
+        </button>
       </nav>
     </header>
 
     <!--Main-->
     <main class="main">
       <article class="main__home">
-        <img
-          src="{% static 'img/sculture.png' %}"
-          alt="GreekStatue"
-          title="MainImage"
-          class="main__home--img"
-        />
-        <h1 class="main__home--h1">AndrevLare <span>Web-Deb</span></h1>
-        <button class="main__home--button">Contáctame</button>
+        <div class="main__home__div">
+          <img
+            src="{% static 'img/sculture.png' %}"
+            alt="GreekStatue"
+            title="MainImage"
+            class="main__home__div--img"
+          />
+          <span class="main__home__div--span">FULLSTACK DEV</span>
+        </div>
+        <h1 class="main__home--h1">ANDREVLARE </br><span>WebDev</span></h1>
         <p class="main__home--p">
           En AndrevLare, se diseñan sitios web que conectan con tu público y
           hacen crecer tu negocio. Potencia tu presencia en línea con
           creatividad y soluciones a tu medida.
         </p>
+        <button class="main__home--button">Contáctame</button>
       </article>
 
       <!--Social Media-->
@@ -89,12 +106,30 @@
         <section class="main__CTA__section">
           <h2 class="main__CTA__section--h2">¡Tener Una Web Si Importa!</h2>
           <ul class="main__CTA__section__ul">
-            <li class="main__CTA__section__ul--li">reason1</li>
-            <li class="main__CTA__section__ul--li">reason2</li>
-            <li class="main__CTA__section__ul--li">reason3</li>
-            <li class="main__CTA__section__ul--li">reason4</li>
-            <li class="main__CTA__section__ul--li">reason5</li>
-            <li class="main__CTA__section__ul--li">reason6</li>
+            <li class="main__CTA__section__ul--li">
+              <span>Disponible 24/7:</span> Tu negocio online accesible a
+              cualquier hora, desde cualquier lugar.
+            </li>
+            <li class="main__CTA__section__ul--li">
+              <span>Mayor Credibilidad:</span> Una web bien diseñada te
+              posiciona como un profesional confiable.
+            </li>
+            <li class="main__CTA__section__ul--li">
+              <span>Alcance Global:</span> Expande tu mercado y llega a clientes
+              de todo el mundo.
+            </li>
+            <li class="main__CTA__section__ul--li">
+              <span>Genera Leads:</span> Convierte visitantes en clientes con
+              llamadas a la acción efectivas.
+            </li>
+            <li class="main__CTA__section__ul--li">
+              <span>Marketing Potente:</span> Optimiza estrategias de SEO y
+              publicidad digital para atraer más tráfico.
+            </li>
+            <li class="main__CTA__section__ul--li">
+              <span>Control Total de Tu Marca:</span> Diseña tu imagen como
+              quieres que el mundo la vea.
+            </li>
           </ul>
         </section>
         <section class="main__CTA__form">
@@ -105,19 +140,27 @@
             {% csrf_token %}
 
             <label for="name">Tu nombre</label>
-            <input name="name" id="name" type="text" placeholder="AndrevLare" />
+            <input
+              name="name"
+              id="name"
+              type="text"
+              placeholder="AndrevLare"
+              required
+            />
             <label for="mail">Tu correo</label>
             <input
               name="mail"
               id="mail"
               type="mail"
               placeholder="ejemplo@gmail.com"
+              required
             />
             <label for="message">Mensaje</label>
             <textarea
               name="message"
               id="message"
               placeholder="¡Hablame de como deseas llevar negocio o marca al siguiente nivel!"
+              required
             ></textarea>
             <input type="submit" />
           </form>
@@ -128,6 +171,7 @@
       <article class="main__portfolio">
         <h3 class="main__portfolio--h3">Echale un vistazo a mis proyectos</h3>
         <span class="main__portfolio--span">Mi Portfolio</span>
+        <i class="fa-solid fa-briefcase"></i>
       </article>
 
       <!--Services-->
@@ -186,10 +230,9 @@
           </li>
         </ul>
       </section>
-      <span class="footer--span"
-        >Sitio web de AndrevLare ©2024 Todos los Derechos Reservados | El sitio
-        no usa cookies</span
-      >
+      <span class="footer--span">
+        Sitio web de AndrevLare ©2024 Todos los Derechos Reservados
+      </span>
     </footer>
   </body>
 </html>
