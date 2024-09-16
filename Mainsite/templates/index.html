@@ -62,7 +62,10 @@
           />
           <span class="main__home__div--span">FULLSTACK DEV</span>
         </div>
-        <h1 class="main__home--h1">ANDREVLARE </br><span>WebDev</span></h1>
+        <h1 class="main__home--h1">
+          ANDREVLARE <br />
+          <span>WebDev</span>
+        </h1>
         <p class="main__home--p">
           En AndrevLare, se diseñan sitios web que conectan con tu público y
           hacen crecer tu negocio. Potencia tu presencia en línea con
@@ -107,61 +110,87 @@
           <h2 class="main__CTA__section--h2">¡Tener Una Web Si Importa!</h2>
           <ul class="main__CTA__section__ul">
             <li class="main__CTA__section__ul--li">
-              <span>Disponible 24/7:</span> Tu negocio online accesible a
-              cualquier hora, desde cualquier lugar.
+              <h3>Disponible 24/7</h3>
+              <p>
+                Tu negocio online accesible a cualquier hora, desde cualquier
+                lugar.
+              </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <span>Mayor Credibilidad:</span> Una web bien diseñada te
-              posiciona como un profesional confiable.
+              <h3>Mayor Credibilidad</h3>
+              <p>
+                Una web bien diseñada te posiciona como un profesional
+                confiable.
+              </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <span>Alcance Global:</span> Expande tu mercado y llega a clientes
-              de todo el mundo.
+              <h3>Alcance Global</h3>
+              <p>Expande tu mercado y llega a clientes de todo el mundo.</p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <span>Genera Leads:</span> Convierte visitantes en clientes con
-              llamadas a la acción efectivas.
+              <h3>Genera Leads</h3>
+              <p>
+                Convierte visitantes en clientes con llamadas a la acción
+                efectivas.
+              </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <span>Marketing Potente:</span> Optimiza estrategias de SEO y
-              publicidad digital para atraer más tráfico.
+              <h3>Marketing Potente</h3>
+              <p>
+                Optimiza estrategias de SEO y publicidad digital para atraer más
+                tráfico.
+              </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <span>Control Total de Tu Marca:</span> Diseña tu imagen como
-              quieres que el mundo la vea.
+              <h3>Control Total de Tu Marca</h3>
+              <p>Diseña tu imagen como quieres que el mundo la vea.</p>
             </li>
           </ul>
         </section>
         <section class="main__CTA__form">
           <h2 class="main__CTA__form--h2">
-            Lleva tu presencia en línea a otro nivel
+            Lleva Tu Presencia En Línea A Otro Nivel
           </h2>
-          <form method="post" class="main__CTA__form__form">
+          <form method="post" class="main__CTA__form__form" autocomplete="off">
             {% csrf_token %}
 
-            <label for="name">Tu nombre</label>
-            <input
-              name="name"
-              id="name"
-              type="text"
-              placeholder="AndrevLare"
-              required
-            />
-            <label for="mail">Tu correo</label>
-            <input
-              name="mail"
-              id="mail"
-              type="mail"
-              placeholder="ejemplo@gmail.com"
-              required
-            />
-            <label for="message">Mensaje</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="¡Hablame de como deseas llevar negocio o marca al siguiente nivel!"
-              required
-            ></textarea>
+            <div class="main__CTA__form__form__div">
+              <label for="name" class="main__CTA__form__form__div--label"
+                >Tu nombre</label
+              >
+              <input
+                name="name"
+                id="name"
+                type="text"
+                placeholder="AndrevLare"
+                required
+              />
+            </div>
+
+            <div class="main__CTA__form__form__div">
+              <label for="mail" class="main__CTA__form__form__div--label"
+                >Tu correo</label
+              >
+              <input
+                name="mail"
+                id="mail"
+                type="mail"
+                placeholder="ejemplo@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="main__CTA__form__form__div">
+              <label for="message" class="main__CTA__form__form__div--label"
+                >Mensaje</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                placeholder="¡Hablame de como deseas llevar negocio o marca al siguiente nivel!"
+                required
+              ></textarea>
+            </div>
             <input type="submit" />
           </form>
         </section>

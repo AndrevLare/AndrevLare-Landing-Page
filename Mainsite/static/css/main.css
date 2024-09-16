@@ -1,12 +1,15 @@
 @import url(variables.css);
 
 /* HTML*/
-body {
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", system-ui;
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
+}
+body {
   background-color: var(--main-black);
 }
 img {
@@ -15,7 +18,8 @@ img {
 
 /* Header */
 .header {
-  background-color: var(--main-black);
+  background-color: var(--transparent-black);
+  backdrop-filter: blur(7.5px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,6 +27,8 @@ img {
   height: 4rem;
   position: sticky;
   top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--main-white);
 }
 .header__div {
   display: flex;
@@ -33,10 +39,11 @@ img {
   margin-inline: 1rem 0.5rem;
 }
 .header__div--span {
-  font-family: "Roboto Mono", monospace;
+  font-family: "MuseoModerno", sans-serif;
   font-optical-sizing: auto;
-  font-style: normal;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
 }
 .header__nav__button {
   border: none;
@@ -52,7 +59,7 @@ img {
 .header__nav__button--span {
   width: 100%;
   height: 0.35rem;
-  background-color: var(--main-white);
+  background-color: var(--amethyst);
   border-radius: 1rem;
 }
 .header__nav__ul {
@@ -69,7 +76,9 @@ img {
 .main__home {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: var(--main-black);
+  min-height: calc(100vh - 4rem);
 }
 .main__home__div {
   display: flex;
@@ -77,10 +86,10 @@ img {
   align-items: center;
 }
 .main__home__div--img {
-  width: 85vw;
+  width: 80vw;
 }
 .main__home__div--span {
-  background-color: var(--green);
+  background-color: var(--amethyst);
   padding: 0.75rem;
   border-radius: 50%;
   font-family: "Roboto", system-ui;
@@ -108,4 +117,106 @@ img {
   color: var(--main-white);
   font-size: 2.5rem;
   font-weight: 600;
+}
+.main__home--p {
+  max-width: 75vw;
+  color: var(--main-white);
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.1rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+.main__home--button {
+  font-weight: 700;
+  background-color: var(--amethyst);
+  color: var(--main-black);
+  font-size: 1.75rem;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  margin-block: 1rem 2rem;
+}
+
+/* Social Media */
+.main__social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--amethyst);
+  padding: 1rem 1rem 0 1rem;
+  border-block: 4px solid var(--green);
+}
+.main__social-media--p {
+  max-width: 75vw;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.25rem;
+}
+.main__social-media__ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 1.5rem;
+  margin: 1rem 0;
+  font-size: 2rem;
+  max-width: 100vw;
+}
+
+/* CTA */
+.main__CTA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-black);
+  padding: 1rem;
+}
+.main__CTA__section--h2,
+.main__CTA__form--h2 {
+  color: var(--main-white);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.25rem;
+  letter-spacing: 0.05rem;
+  margin-top: 1rem;
+}
+.main__CTA__section__ul {
+  list-style: none;
+  color: var(--main-white);
+  margin-block: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main__CTA__section__ul--li {
+  padding: 1.5rem;
+  border: 0.5rem solid #0a0a0a;
+  border-radius: 1rem;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.main__CTA__section__ul--li h3 {
+  position: absolute;
+  top: -1.5rem;
+  left: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--green);
+  background-color: var(--main-black);
+  padding-inline: 0.5rem;
+}
+.main__CTA__section__ul--li p {
+  letter-spacing: 0.075rem;
+  font-weight: 500;
+}
+
+.main__CTA__form {
 }
