@@ -74,34 +74,51 @@
         <button class="main__home--button">Contáctame</button>
       </article>
 
-      <!--Social Media-->
-      <article class="main__social-media">
-        <p class="main__social-media--p">
-          ¡Sigeme en todas mis redes o contáctame por ellas!
-        </p>
-        <ul class="main__social-media__ul">
-          <li class="main__social-media__ul--li">
-            <i class="fa-brands fa-instagram"></i>
-          </li>
-          <li class="main__social-media__ul--li">
-            <i class="fa-brands fa-x-twitter"></i>
-          </li>
-          <li class="main__social-media__ul--li">
-            <i class="fa-brands fa-threads"></i>
-          </li>
-          <li class="main__social-media__ul--li">
-            <i class="fa-brands fa-youtube"></i>
-          </li>
-          <li class="main__social-media__ul--li">
-            <i class="fa-brands fa-facebook"></i>
-          </li>
-          <li class="main__social-media__ul--li">
-            <i class="fa-brands fa-whatsapp"></i>
-          </li>
-          <li class="main__social-media__ul--li">
-            <i class="fa-regular fa-envelope"></i>
-          </li>
-        </ul>
+      <!--Portfolio-->
+      <article class="main__portfolio">
+        <h3 class="main__portfolio--h3">
+          Sobre <span>AndrevLare</span> y sus <span>Proyectos</span>
+        </h3>
+
+        <div class="main__portfolio__card-container">
+          <div class="card">
+            <!-- Frente de la tarjeta -->
+            <div class="card-side card-front">
+              <div class="card-front__div"><span>ID Card</span></div>
+              <div class="card-front__div-grid">
+                <div class="card-front__div-grid__img">
+                  <img
+                    src="{% static 'img/AndrevLare/AndrevLare-Avatar.jpg' %}"
+                    alt="AndrevLare Avatar"
+                    title="AndrevLare"
+                    class="card-front__div-grid__img--img"
+                  />
+                </div>
+                <div class="card-front__div-grid__name">
+                  <p class="card-front__div-grid__name--p">AndrevLare</p>
+                  <span class="card-front__div-grid__name--span"></span>
+                  <span class="card-front__div-grid__name--span"></span>
+                </div>
+                <div class="card-front__div-grid__skill">
+                  <p class="card-front__div-grid__skill--p">
+                    Fullstack Developer
+                  </p>
+                  <span class="card-front__div-grid__skill--span"></span>
+                  <span class="card-front__div-grid__skill--span"></span>
+                </div>
+                <div class="card-front__div-grid__bars-code"></div>
+                <div class="card-front__div-grid__click">
+                  <span class="card-front__div-grid__click"></span>
+                </div>
+              </div>
+            </div>
+            <!-- Reverso de la tarjeta -->
+            <div class="card-side card-back">Hello World</div>
+          </div>
+        </div>
+        <button class="main__portfolio--button">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Mi Portfolio
+        </button>
       </article>
 
       <!--CTA-->
@@ -156,7 +173,7 @@
 
             <div class="main__CTA__form__form__div">
               <label for="name" class="main__CTA__form__form__div--label"
-                >Tu nombre</label
+                ><i class="fa-solid fa-user"></i> Tu nombre</label
               >
               <input
                 name="name"
@@ -169,7 +186,7 @@
 
             <div class="main__CTA__form__form__div">
               <label for="mail" class="main__CTA__form__form__div--label"
-                >Tu correo</label
+                ><i class="fa-solid fa-at"></i> Tu correo</label
               >
               <input
                 name="mail"
@@ -182,7 +199,7 @@
 
             <div class="main__CTA__form__form__div">
               <label for="message" class="main__CTA__form__form__div--label"
-                >Mensaje</label
+                ><i class="fa-solid fa-message"></i> Mensaje</label
               >
               <textarea
                 name="message"
@@ -191,16 +208,43 @@
                 required
               ></textarea>
             </div>
-            <input type="submit" />
+            <input
+              type="submit"
+              class="main__CTA__form__form--submit"
+              value="Enviar"
+            />
           </form>
         </section>
       </article>
 
-      <!--Portfolio-->
-      <article class="main__portfolio">
-        <h3 class="main__portfolio--h3">Echale un vistazo a mis proyectos</h3>
-        <span class="main__portfolio--span">Mi Portfolio</span>
-        <i class="fa-solid fa-briefcase"></i>
+      <!--Social Media-->
+      <article class="main__social-media">
+        <p class="main__social-media--p">
+          ¡Sigeme en todas mis redes o contáctame por ellas!
+        </p>
+        <ul class="main__social-media__ul">
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-threads"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-brands fa-whatsapp"></i>
+          </li>
+          <li class="main__social-media__ul--li">
+            <i class="fa-regular fa-envelope"></i>
+          </li>
+        </ul>
       </article>
 
       <!--Services-->
@@ -259,9 +303,11 @@
           </li>
         </ul>
       </section>
-      <span class="footer--span">
-        Sitio web de AndrevLare ©2024 Todos los Derechos Reservados
-      </span>
+      <marquee direction="right"
+        ><span class="footer--span">
+          Sitio web de AndrevLare ©2024 Todos los Derechos Reservados
+        </span>
+      </marquee>
     </footer>
   </body>
 </html>

@@ -67,11 +67,6 @@ img {
   list-style: none;
 }
 
-/* Main */
-/*.main {
-  display: flex;
-}*/
-
 /* Home */
 .main__home {
   display: flex;
@@ -130,7 +125,10 @@ img {
   font-size: 1.1rem;
   margin: 1rem;
 }
-.main__home--button {
+.main__home--button,
+.main__CTA__form__form--submit,
+.main__portfolio__div,
+.main__portfolio--button {
   font-weight: 700;
   background-color: var(--amethyst);
   color: var(--main-black);
@@ -139,8 +137,16 @@ img {
   border: none;
   border-radius: 1rem;
   margin-block: 1rem 2rem;
+  min-width: 10rem;
+  border: 2px solid var(--main-black);
+  transition: scale 0.3s ease-in;
 }
-
+.main__home--button:active,
+.main__CTA__form__form--submit:active,
+.main__portfolio__div:active,
+.main__portfolio--button:active {
+  scale: 1.1;
+}
 /* Social Media */
 .main__social-media {
   display: flex;
@@ -194,7 +200,7 @@ img {
 }
 .main__CTA__section__ul--li {
   padding: 1.5rem;
-  border: 0.5rem solid #0a0a0a;
+  border: 0.5rem solid var(--amethyst);
   border-radius: 1rem;
   height: 7.5rem;
   display: flex;
@@ -217,6 +223,156 @@ img {
   letter-spacing: 0.075rem;
   font-weight: 500;
 }
+.main__CTA__form__form {
+  margin-top: 1rem;
+  color: var(--main-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.main__CTA__form__form__div {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+.main__CTA__form__form__div input,
+.main__CTA__form__form__div textarea {
+  border: 2px solid var(--amethyst);
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: black;
+  font-weight: 500;
+  outline: none;
+  caret-color: var(--amethyst);
+  resize: none;
+  transition-duration: 0.3s;
+}
+.main__CTA__form__form__div textarea {
+  height: 7.5rem;
+}
+.main__CTA__form__form__div--label {
+  position: relative;
+  left: 0.1rem;
+  color: var(--green);
+  transition-duration: 0.3s;
+}
+.main__CTA__form__form__div:has(> input:focus) label,
+.main__CTA__form__form__div:has(> textarea:focus) label {
+  color: var(--amethyst);
+  font-size: 1.2rem;
+}
+.main__CTA__form__form__div input:focus,
+.main__CTA__form__form__div textarea:focus {
+  border-color: var(--green);
+}
 
-.main__CTA__form {
+/* Portfolio */
+.main__portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-black);
+  padding: 1rem;
+  border-block: 4px solid var(--main-white);
+}
+.main__portfolio--h3,
+.main__portfolio--h3 span {
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--main-white);
+}
+.main__portfolio--h3 span {
+  color: var(--green);
+}
+
+/* Contenedor para darle perspectiva */
+.main__portfolio__card-container {
+  perspective: 1000px;
+  width: 250px;
+  height: 150px;
+  margin-block: 50px;
+}
+
+/* Estilos para la tarjeta */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease, width 0.8s ease, left 0.8s ease;
+  left: 0;
+}
+
+/* Estilos para el frente y el reverso de la tarjeta */
+.card-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  border: 2px solid var(--main-white);
+}
+
+/* Estilos para el frente de la tarjeta */
+.card-front {
+  background-color: #101011;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card-front__div {
+  height: 15%;
+  background-color: var(--amethyst);
+  color: var(--main-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-front__div-grid {
+  width: 100%;
+  height: 85%;
+  display: grid;
+  grid-template-columns: 40% 50% 10%;
+  grid-template-rows: 40% 40% 20%;
+}
+.card-front__div-grid__img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  height: 80%;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid var(--main-white);
+}
+.card-front__div-grid__img--img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%; /* Centra horizontalmente */
+  top: 50%; /* Centra verticalmente */
+  transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+}
+
+/* Estilos para el reverso de la tarjeta */
+.card-back {
+  background-color: #1a73e8; /* Color azul para el reverso */
+  transform: rotateY(180deg); /* Rotación inicial para el reverso */
+}
+
+/* Efecto hover */
+.main__portfolio__card-container:hover .card {
+  transform: rotateY(180deg) rotateZ(90deg);
+  width: 200px;
+  left: 25px;
 }
