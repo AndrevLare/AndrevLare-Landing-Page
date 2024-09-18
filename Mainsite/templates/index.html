@@ -29,7 +29,7 @@
     <header class="header">
       <div class="header__div">
         <img
-          src="{% static 'img/AndrevLare/cubic-LogoAndrevLareTextLess.png' %}"
+          src="{% static 'img/AndrevLare/LogoAndrevLareTextLess.svg' %}"
           alt="AndrevLareIcon"
           title="AndrevLare Icon"
           class="header__div--img"
@@ -77,10 +77,10 @@
       <!--Portfolio-->
       <article class="main__portfolio">
         <h3 class="main__portfolio--h3">
-          Sobre <span>AndrevLare</span> y sus <span>Proyectos</span>
+          <span>AndrevLare</span> y sus <span>Proyectos</span>
         </h3>
 
-        <div class="main__portfolio__card-container">
+        <div class="main__portfolio__card-container" onclick="flipCard()">
           <div class="card">
             <!-- Frente de la tarjeta -->
             <div class="card-side card-front">
@@ -96,28 +96,79 @@
                 </div>
                 <div class="card-front__div-grid__name">
                   <p class="card-front__div-grid__name--p">AndrevLare</p>
-                  <span class="card-front__div-grid__name--span"></span>
-                  <span class="card-front__div-grid__name--span"></span>
+                  <span class="card-front__div-grid__name--span0"></span>
+                  <span class="card-front__div-grid__name--span1"></span>
                 </div>
                 <div class="card-front__div-grid__skill">
                   <p class="card-front__div-grid__skill--p">
                     Fullstack Developer
                   </p>
-                  <span class="card-front__div-grid__skill--span"></span>
-                  <span class="card-front__div-grid__skill--span"></span>
+                  <span class="card-front__div-grid__skill--span0"></span>
+                  <span class="card-front__div-grid__skill--span1"></span>
                 </div>
+                <div class="card-front__div-grid__sign"></div>
                 <div class="card-front__div-grid__bars-code"></div>
                 <div class="card-front__div-grid__click">
-                  <span class="card-front__div-grid__click"></span>
+                  <i
+                    class="fa-solid fa-hand-pointer card-front__div-grid__click--i"
+                  ></i>
+                  <span class="card-front__div-grid__click--span">Click</span>
                 </div>
               </div>
             </div>
             <!-- Reverso de la tarjeta -->
-            <div class="card-side card-back">Hello World</div>
+            <div class="card-side card-back">
+              <div class="card-back__container">
+                <div class="card-back__container__logo">
+                  <img
+                    src="{% static 'img/AndrevLare/LogoAndrevLareTextLess.svg' %}"
+                    alt="AndrevLareLogo"
+                    title="AndrevLare Logo"
+                  />
+                </div>
+                <div class="card-back__container__about">
+                  <span class="card-back__container__about--AndrevLare"
+                    >AndrevLare</span
+                  >
+                  <span class="card-back__container__about--fullstack"
+                    >Desarrollador Fullstack</span
+                  >
+                </div>
+                <div class="card-back__container__skills">
+                  <h4 class="card-back__container__skills--h4">Skills</h4>
+                  <ul class="card-back__container__skills__ul">
+                    <li class="card-back__container__skills__ul--li">
+                      <i class="fa-brands fa-html5"></i>
+                    </li>
+                    <li class="card-back__container__skills__ul--li">
+                      <i class="fa-brands fa-css3-alt"></i>
+                    </li>
+                    <li class="card-back__container__skills__ul--li">
+                      <i class="fa-brands fa-js"></i>
+                    </li>
+                    <li class="card-back__container__skills__ul--li">
+                      <i class="fa-brands fa-python"></i>
+                    </li>
+                    <li class="card-back__container__skills__ul--li-">
+                      <svg
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="m11.146 0h3.924v18.165c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.001 2.65-6.6 6.753-6.6.637 0 1.121.051 1.707.204zm0 9.143a3.894 3.894 0 0 0 -1.325-.204c-1.988 0-3.134 1.223-3.134 3.364 0 2.09 1.096 3.236 3.109 3.236.433 0 .79-.025 1.35-.102v-6.295zm10.168-3.083v9.097c0 3.134-.229 4.638-.917 5.937-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.529 3.109-2.625.561-1.121.739-2.421.739-5.835v-7.747h3.924zm-3.924-6.039h3.924v4.026h-3.924z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <button class="main__portfolio--button">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i> Mi Portfolio
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Mi Portfolio
         </button>
       </article>
 
@@ -173,7 +224,7 @@
 
             <div class="main__CTA__form__form__div">
               <label for="name" class="main__CTA__form__form__div--label"
-                ><i class="fa-solid fa-user"></i> Tu nombre</label
+                ><i class="fa-solid fa-user"></i>Tu nombre</label
               >
               <input
                 name="name"
@@ -186,7 +237,7 @@
 
             <div class="main__CTA__form__form__div">
               <label for="mail" class="main__CTA__form__form__div--label"
-                ><i class="fa-solid fa-at"></i> Tu correo</label
+                ><i class="fa-solid fa-at"></i>Tu correo</label
               >
               <input
                 name="mail"
@@ -195,6 +246,19 @@
                 placeholder="ejemplo@gmail.com"
                 required
               />
+            </div>
+
+            <div class="main__CTA__form__form__div">
+              <label for="service" class="main__CTA__form__form__div--label"
+                ><i class="fa-solid fa-cart-shopping"></i>Servicio</label
+              >
+              <select name="service" id="service" required>
+                <option disabled selected>Selecciona un servicio</option>
+                <option value="Landing-Page">Landing Page</option>
+                <option value="Landing-Page">Portfolio</option>
+                <option value="Landing-Page">Sitio Web Corporativo</option>
+                <option value="Landing-Page">Otro</option>
+              </select>
             </div>
 
             <div class="main__CTA__form__form__div">
@@ -219,9 +283,9 @@
 
       <!--Social Media-->
       <article class="main__social-media">
-        <p class="main__social-media--p">
+        <h3 class="main__social-media--h3">
           ¡Sigeme en todas mis redes o contáctame por ellas!
-        </p>
+        </h3>
         <ul class="main__social-media__ul">
           <li class="main__social-media__ul--li">
             <i class="fa-brands fa-instagram"></i>
@@ -249,12 +313,54 @@
 
       <!--Services-->
       <article class="main__services">
-        <h3 class="main__services--h3">Mis Servicios</h3>
+        <h2 class="main__services--h2">Mis Servicios</h2>
         <section class="main__services__section">
-          <div class="main__services__section__div"></div>
-          <div class="main__services__section__div"></div>
-          <div class="main__services__section__div"></div>
-          <div class="main__services__section__div"></div>
+          <div class="main__services__section__card">
+            <i>ICONO</i>
+            <h3 class="main__services__section__card--h3">Landing Page</h3>
+            <ul class="main__services__section__card__ul">
+              <li class="main__services__section__card__ul--li">List Item 1</li>
+              <li class="main__services__section__card__ul--li">List Item 2</li>
+              <li class="main__services__section__card__ul--li">List Item 3</li>
+              <li class="main__services__section__card__ul--li">List Item 4</li>
+              <li class="main__services__section__card__ul--li">List Item 5</li>
+            </ul>
+          </div>
+          <div class="main__services__section__card">
+            <i>ICONO</i>
+            <h3 class="main__services__section__card--h3">Portafolio</h3>
+            <ul class="main__services__section__card__ul">
+              <li class="main__services__section__card__ul--li"></li>
+              <li class="main__services__section__card__ul--li">List Item 2</li>
+              <li class="main__services__section__card__ul--li">List Item 3</li>
+              <li class="main__services__section__card__ul--li">List Item 4</li>
+              <li class="main__services__section__card__ul--li">List Item 5</li>
+            </ul>
+          </div>
+          <div class="main__services__section__card">
+            <i>ICONO</i>
+            <h3 class="main__services__section__card--h3">
+              Sitio Web Corporativo
+            </h3>
+            <ul class="main__services__section__card__ul">
+              <li class="main__services__section__card__ul--li"></li>
+              <li class="main__services__section__card__ul--li">List Item 2</li>
+              <li class="main__services__section__card__ul--li">List Item 3</li>
+              <li class="main__services__section__card__ul--li">List Item 4</li>
+              <li class="main__services__section__card__ul--li">List Item 5</li>
+            </ul>
+          </div>
+          <div class="main__services__section__card">
+            <i>ICONO</i>
+            <h3 class="main__services__section__card--h3">Otro</h3>
+            <ul class="main__services__section__card__ul">
+              <li class="main__services__section__card__ul--li"></li>
+              <li class="main__services__section__card__ul--li">List Item 2</li>
+              <li class="main__services__section__card__ul--li">List Item 3</li>
+              <li class="main__services__section__card__ul--li">List Item 4</li>
+              <li class="main__services__section__card__ul--li">List Item 5</li>
+            </ul>
+          </div>
           <button class="main__services__section--button">
             Haz una cotización
           </button>
@@ -263,10 +369,10 @@
 
       <!--Phrase-->
       <article class="main__phrase">
-        <span class="main__phrase--span"
-          >"Yo no programo para solucionar problemas, programo para crear
-          soluciones"</span
-        >
+        <h3 class="main__phrase--h3">
+          <span>"</span> Yo no programo para solucionar problemas, programo para
+          crear soluciones <span>"</span>
+        </h3>
       </article>
     </main>
 
@@ -309,5 +415,8 @@
         </span>
       </marquee>
     </footer>
+
+    <!--Scripts-->
+    <script src="{% static 'js/cardLogic.js' %}"></script>
   </body>
 </html>

@@ -125,15 +125,17 @@ img {
   font-size: 1.1rem;
   margin: 1rem;
 }
+/* Buttons */
 .main__home--button,
 .main__CTA__form__form--submit,
 .main__portfolio__div,
-.main__portfolio--button {
+.main__portfolio--button,
+.main__services__section--button {
   font-weight: 700;
   background-color: var(--amethyst);
   color: var(--main-black);
   font-size: 1.75rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 1rem;
   margin-block: 1rem 2rem;
@@ -156,7 +158,7 @@ img {
   padding: 1rem 1rem 0 1rem;
   border-block: 4px solid var(--green);
 }
-.main__social-media--p {
+.main__social-media--h3 {
   max-width: 75vw;
   font-size: 1.5rem;
   text-align: center;
@@ -189,6 +191,7 @@ img {
   line-height: 3.25rem;
   letter-spacing: 0.05rem;
   margin-top: 1rem;
+  text-align: center;
 }
 .main__CTA__section__ul {
   list-style: none;
@@ -242,12 +245,24 @@ img {
   background-color: transparent;
   border-radius: 10px;
   padding: 12px 15px;
-  color: black;
+  color: var(--main-black);
   font-weight: 500;
   outline: none;
   caret-color: var(--amethyst);
   resize: none;
   transition-duration: 0.3s;
+}
+
+.main__CTA__form__form__div select,
+.main__CTA__form__form__div option {
+  border: 2px solid var(--amethyst);
+  background-color: var(--main-black);
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: #777;
+  font-weight: 500;
+  outline: none;
+  caret-color: var(--amethyst);
 }
 .main__CTA__form__form__div textarea {
   height: 7.5rem;
@@ -259,12 +274,14 @@ img {
   transition-duration: 0.3s;
 }
 .main__CTA__form__form__div:has(> input:focus) label,
-.main__CTA__form__form__div:has(> textarea:focus) label {
+.main__CTA__form__form__div:has(> textarea:focus) label,
+.main__CTA__form__form__div:has(> select:focus) label {
   color: var(--amethyst);
   font-size: 1.2rem;
 }
 .main__CTA__form__form__div input:focus,
-.main__CTA__form__form__div textarea:focus {
+.main__CTA__form__form__div textarea:focus,
+.main__CTA__form__form__div select:focus {
   border-color: var(--green);
 }
 
@@ -280,7 +297,7 @@ img {
 .main__portfolio--h3,
 .main__portfolio--h3 span {
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   line-height: 2rem;
   text-align: center;
   color: var(--main-white);
@@ -294,17 +311,19 @@ img {
   perspective: 1000px;
   width: 250px;
   height: 150px;
-  margin-block: 50px;
+  margin-block: 75px;
 }
 
 /* Estilos para la tarjeta */
 .card {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.8s ease, width 0.8s ease, left 0.8s ease;
-  left: 0;
+  transition: top 0.4s ease, transform 0.4s ease, width 0.4s ease,
+    height 0.4s ease, left 0.4s ease;
 }
 
 /* Estilos para el frente y el reverso de la tarjeta */
@@ -315,6 +334,7 @@ img {
   backface-visibility: hidden;
   border-radius: 1rem;
   border: 2px solid var(--main-white);
+  overflow: hidden;
 }
 
 /* Estilos para el frente de la tarjeta */
@@ -338,7 +358,7 @@ img {
   height: 85%;
   display: grid;
   grid-template-columns: 40% 50% 10%;
-  grid-template-rows: 40% 40% 20%;
+  grid-template-rows: 37.5% 37.5% 25%;
 }
 .card-front__div-grid__img {
   grid-column: 1 / 2;
@@ -363,16 +383,225 @@ img {
   top: 50%; /* Centra verticalmente */
   transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
 }
-
+.card-front__div-grid__name {
+  color: var(--main-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.1rem;
+  margin-top: 0.75rem;
+}
+.card-front__div-grid__name--p {
+  font-size: 0.9rem;
+}
+.card-front__div-grid__name--span0,
+.card-front__div-grid__name--span1,
+.card-front__div-grid__skill--span0,
+.card-front__div-grid__skill--span1 {
+  background-color: var(--main-white);
+  height: 0.4rem;
+  opacity: 0.75;
+  border-radius: 0.1rem;
+}
+.card-front__div-grid__name--span0 {
+  width: 1.5rem;
+}
+.card-front__div-grid__name--span1 {
+  width: 3rem;
+}
+.card-front__div-grid__skill {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  margin-top: 1rem;
+  color: var(--main-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  justify-content: space-between;
+}
+.card-front__div-grid__skill--p {
+  font-size: 0.75rem;
+}
+.card-front__div-grid__skill--span0 {
+  width: 2rem;
+}
+.card-front__div-grid__skill--span1 {
+  width: 3.5rem;
+}
+.card-front__div-grid__sign {
+}
+.card-front__div-grid__bars-code {
+}
+.card-front__div-grid__click {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  font-size: 0.6rem;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-white);
+  margin: 0 1rem 0.5rem 0;
+  background-color: var(--amethyst);
+  border-radius: 50%;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+.card-front__div-grid__click--i {
+  font-size: 1rem;
+}
+.card-front__div-grid__click--span {
+  text-align: center;
+  line-height: 0.6rem;
+  font-size: 0.4rem;
+  vertical-align: middle;
+}
 /* Estilos para el reverso de la tarjeta */
 .card-back {
-  background-color: #1a73e8; /* Color azul para el reverso */
   transform: rotateY(180deg); /* Rotación inicial para el reverso */
+  background-color: #101011;
+  color: var(--main-white);
+}
+.card-back__container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  padding: 0.5rem;
+}
+.card-back__container__logo {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  padding-block: 0.5rem;
+}
+.card-back__container__logo img {
+  height: 100%;
+}
+.card-back__container__about {
+  text-align: center;
+  line-height: 1rem;
+}
+.card-back__container__about--AndrevLare {
+  font-weight: 600;
+  color: var(--green);
+}
+.card-back__container__skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-back__container__skills--h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green);
+}
+.card-back__container__skills__ul {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.75rem;
+  gap: 0 1.5rem;
+  list-style: none;
+  max-width: 80%;
+  justify-content: center;
+}
+.card-back__container__skills__ul--li- {
+  display: inline-flex;
+  align-items: center;
+}
+.card-back__container__skills__ul--li- svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: var(--main-white);
 }
 
-/* Efecto hover */
-.main__portfolio__card-container:hover .card {
-  transform: rotateY(180deg) rotateZ(90deg);
+/* Efecto Girar Targeta */
+.flip-card {
+  transform: rotateY(180deg);
   width: 200px;
+  height: 250px;
   left: 25px;
+  top: -50px;
+}
+
+/* Button */
+.main__portfolio--button {
+  margin-top: 0;
+}
+
+/* Services */
+
+.main__services {
+  display: flex;
+  flex-direction: column;
+  color: var(--main-white);
+  padding: 2rem 1rem 1rem 1rem;
+}
+.main__services--h2 {
+  color: var(--main-white);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.25rem;
+  letter-spacing: 0.05rem;
+  text-align: center;
+}
+.main__services__section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.main__services__section__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 90vw;
+  padding-block: 1rem;
+  border: 3px solid var(--amethyst);
+  border-radius: 1rem;
+}
+.main__services__section i {
+  font-size: 3rem;
+}
+.main__services__section__card--h3 {
+  color: var(--green);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.main__services__section__card__ul {
+  list-style: none;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.075rem;
+}
+
+/* Phrase */
+.main__phrase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--amethyst);
+  padding: 1rem;
+  border-block: 4px solid var(--green);
+}
+.main__phrase--h3 {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--main-black);
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.main__phrase--h3 span {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
