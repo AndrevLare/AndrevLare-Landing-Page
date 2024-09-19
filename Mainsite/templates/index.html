@@ -23,36 +23,66 @@
 
     <!--css-->
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}" />
   </head>
   <body>
     <!--Header-->
     <header class="header">
       <div class="header__div">
-        <img
-          src="{% static 'img/AndrevLare/LogoAndrevLareTextLess.svg' %}"
-          alt="AndrevLareIcon"
-          title="AndrevLare Icon"
-          class="header__div--img"
-        />
-        <span class="header__div--span">AndrevLare</span>
+        <div class="header__div__div">
+          <img
+            src="{% static 'img/AndrevLare/LogoAndrevLareTextLess.svg' %}"
+            alt="AndrevLareIcon"
+            title="AndrevLare Icon"
+            class="header__div__div--img"
+          />
+          <span class="header__div__div--span">AndrevLare</span>
+        </div>
+        <button class="header__div__button">
+          <span class="header__div__button--span menu-bars-1"></span>
+          <span class="header__div__button--span menu-bars-2"></span>
+          <span class="header__div__button--span menu-bars-3"></span>
+        </button>
       </div>
       <nav class="header__nav">
         <ul class="header__nav__ul">
-          <li class="header__nav__ul--li">Inicio</li>
-          <li class="header__nav__ul--li">Contacto</li>
-          <li class="header__nav__ul--li">Servicios</li>
+          <li
+            class="header__nav__ul--li"
+            onclick="scrollToSection('home', 'start')"
+          >
+            Inicio
+          </li>
+          <li
+            class="header__nav__ul--li"
+            onclick="scrollToSection('portfolio', 'center')"
+          >
+            Portafolio
+          </li>
+          <li
+            class="header__nav__ul--li"
+            onclick="scrollToSection('CTA', 'center')"
+          >
+            Tener Una Web Importa
+          </li>
+          <li
+            class="header__nav__ul--li"
+            onclick="scrollToSection('contact', 'center')"
+          >
+            Contacto
+          </li>
+          <li
+            class="header__nav__ul--li"
+            onclick="scrollToSection('services', 'center')"
+          >
+            Servicios
+          </li>
         </ul>
-        <button class="header__nav__button">
-          <span class="header__nav__button--span menu-bars-1"></span>
-          <span class="header__nav__button--span menu-bars-2"></span>
-          <span class="header__nav__button--span menu-bars-3"></span>
-        </button>
       </nav>
     </header>
 
     <!--Main-->
     <main class="main">
-      <article class="main__home">
+      <article class="main__home" id="home">
         <div class="main__home__div">
           <img
             src="{% static 'img/sculture.png' %}"
@@ -71,11 +101,16 @@
           hacen crecer tu negocio. Potencia tu presencia en línea con
           creatividad y soluciones a tu medida.
         </p>
-        <button class="main__home--button">Contáctame</button>
+        <button
+          class="main__home--button"
+          onclick="scrollToSection('contact', 'center')"
+        >
+          Contáctame
+        </button>
       </article>
 
       <!--Portfolio-->
-      <article class="main__portfolio">
+      <article class="main__portfolio" id="portfolio">
         <h3 class="main__portfolio--h3">
           <span>AndrevLare</span> y sus <span>Proyectos</span>
         </h3>
@@ -106,7 +141,13 @@
                   <span class="card-front__div-grid__skill--span0"></span>
                   <span class="card-front__div-grid__skill--span1"></span>
                 </div>
-                <div class="card-front__div-grid__sign"></div>
+                <div class="card-front__div-grid__sign">
+                  <img
+                    src="{% static 'img/sign.png' %}"
+                    alt="sign"
+                    title="sign"
+                  />
+                </div>
                 <div class="card-front__div-grid__bars-code"></div>
                 <div class="card-front__div-grid__click">
                   <i
@@ -174,7 +215,7 @@
 
       <!--CTA-->
       <article class="main__CTA">
-        <section class="main__CTA__section">
+        <section class="main__CTA__section" id="CTA">
           <h2 class="main__CTA__section--h2">¡Tener Una Web Si Importa!</h2>
           <ul class="main__CTA__section__ul">
             <li class="main__CTA__section__ul--li">
@@ -215,7 +256,7 @@
             </li>
           </ul>
         </section>
-        <section class="main__CTA__form">
+        <section class="main__CTA__form" id="contact">
           <h2 class="main__CTA__form--h2">
             Lleva Tu Presencia En Línea A Otro Nivel
           </h2>
@@ -255,9 +296,12 @@
               <select name="service" id="service" required>
                 <option disabled selected>Selecciona un servicio</option>
                 <option value="Landing-Page">Landing Page</option>
-                <option value="Landing-Page">Portfolio</option>
-                <option value="Landing-Page">Sitio Web Corporativo</option>
-                <option value="Landing-Page">Otro</option>
+                <option value="Portfolio">Portfolio</option>
+                <option value="Stitio-Web-Corporativo">
+                  Sitio Web Corporativo
+                </option>
+                <option value="Mantenimiento-Web">Mantenimiento Web</option>
+                <option value="Otro">Otro</option>
               </select>
             </div>
 
@@ -312,58 +356,141 @@
       </article>
 
       <!--Services-->
-      <article class="main__services">
+      <article class="main__services" id="services">
         <h2 class="main__services--h2">Mis Servicios</h2>
         <section class="main__services__section">
           <div class="main__services__section__card">
-            <i>ICONO</i>
+            <i class="fa-solid fa-plane-arrival"></i>
             <h3 class="main__services__section__card--h3">Landing Page</h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li">List Item 1</li>
-              <li class="main__services__section__card__ul--li">List Item 2</li>
-              <li class="main__services__section__card__ul--li">List Item 3</li>
-              <li class="main__services__section__card__ul--li">List Item 4</li>
-              <li class="main__services__section__card__ul--li">List Item 5</li>
+              <li class="main__services__section__card__ul--li">
+                Página única con contenido enfocado en un solo objetivo
+                (promoción de un producto o servicio).
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Call to Action (CTA) claro y visible (como "Suscríbete", "Compra
+                ahora", etc.).
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Sección de testimonios o casos de éxito.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Formulario de captura de leads (nombre, correo electrónico,
+                etc.).
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Diseño visualmente atractivo con enfoque en la conversión.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Optimización básica para SEO.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Diseño responsive (compatible con múltiples dispositivos).
+              </li>
             </ul>
+            <button class="main__services__section__card--button">
+              Seleccionar
+            </button>
           </div>
           <div class="main__services__section__card">
-            <i>ICONO</i>
+            <i class="fa-solid fa-briefcase"></i>
             <h3 class="main__services__section__card--h3">Portafolio</h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li"></li>
-              <li class="main__services__section__card__ul--li">List Item 2</li>
-              <li class="main__services__section__card__ul--li">List Item 3</li>
-              <li class="main__services__section__card__ul--li">List Item 4</li>
-              <li class="main__services__section__card__ul--li">List Item 5</li>
+              <li class="main__services__section__card__ul--li">
+                Página sencilla con diseño personalizado.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Sección para mostrar proyectos o trabajos anteriores.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Contacto directo (formulario o enlace a redes sociales).
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Optimización básica para SEO.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Diseño responsive (adaptado a dispositivos móviles).
+              </li>
             </ul>
+            <button class="main__services__section__card--button">
+              Seleccionar
+            </button>
           </div>
           <div class="main__services__section__card">
-            <i>ICONO</i>
+            <i class="fa-solid fa-city"></i>
             <h3 class="main__services__section__card--h3">
               Sitio Web Corporativo
             </h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li"></li>
-              <li class="main__services__section__card__ul--li">List Item 2</li>
-              <li class="main__services__section__card__ul--li">List Item 3</li>
-              <li class="main__services__section__card__ul--li">List Item 4</li>
-              <li class="main__services__section__card__ul--li">List Item 5</li>
+              <li class="main__services__section__card__ul--li">
+                Múltiples secciones: Home, Sobre Nosotros, Servicios, Blog,
+                Contacto, etc.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Diseño profesional y personalizado para la marca.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Sección de noticias o blog.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Formulario de contacto.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Galería o portafolio de servicios.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Optimización básica para SEO.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Diseño responsive.
+              </li>
             </ul>
+            <button class="main__services__section__card--button">
+              Seleccionar
+            </button>
           </div>
           <div class="main__services__section__card">
-            <i>ICONO</i>
+            <i class="fa-solid fa-gears"></i>
+            <h3 class="main__services__section__card--h3">Mantenimiento Web</h3>
+            <ul class="main__services__section__card__ul">
+              <li class="main__services__section__card__ul--li">
+                Actualización de contenido y textos.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Corrección de errores menores o ajustes de diseño.
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Rediseño total
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Monitoreo básico del estado del sitio
+              </li>
+            </ul>
+            <button class="main__services__section__card--button">
+              Seleccionar
+            </button>
+          </div>
+          <div class="main__services__section__card">
+            <i class="fa-solid fa-code"></i>
             <h3 class="main__services__section__card--h3">Otro</h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li"></li>
-              <li class="main__services__section__card__ul--li">List Item 2</li>
-              <li class="main__services__section__card__ul--li">List Item 3</li>
-              <li class="main__services__section__card__ul--li">List Item 4</li>
-              <li class="main__services__section__card__ul--li">List Item 5</li>
+              <li class="main__services__section__card__ul--li">
+                Sitio web especifico (lo que necesites)
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Secciones personalizadas
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Diseño responsive
+              </li>
+              <li class="main__services__section__card__ul--li">
+                Optimización SEO básico
+              </li>
             </ul>
+            <button class="main__services__section__card--button">
+              Seleccionar
+            </button>
           </div>
-          <button class="main__services__section--button">
-            Haz una cotización
-          </button>
         </section>
       </article>
 
@@ -384,39 +511,68 @@
         title="Logo AndrevLare"
         class="footer--img"
       />
-      <ul class="footer__ul">
-        <li class="footer__ul--li">Home</li>
-        <li class="footer__ul--li">Contacto</li>
-        <li class="footer__ul--li">Servicios</li>
-      </ul>
       <section class="footer__section">
-        <h4 class="footer__section--h4">Medios de contacto</h4>
-        <ul class="footer__section_ul">
-          <li class="footer__section__ul--li">
-            <i class="fa-brands fa-instagram"></i>
+        <ul class="footer__section__ul">
+          <li
+            class="footer__section__ul--li"
+            onclick="scrollToSection('home', 'start')"
+          >
+            Inicio
           </li>
-          <li class="footer__section__ul--li">
-            <i class="fa-brands fa-x-twitter"></i>
+          <li
+            class="footer__section__ul--li"
+            onclick="scrollToSection('portfolio', 'center')"
+          >
+            Portafolio
           </li>
-          <li class="footer__section__ul--li">
-            <i class="fa-brands fa-facebook"></i>
+          <li
+            class="footer__section__ul--li"
+            onclick="scrollToSection('CTA', 'center')"
+          >
+            Tener Una Web Importa
           </li>
-          <li class="footer__section__ul--li">
-            <i class="fa-brands fa-whatsapp"></i>
+          <li
+            class="footer__section__ul--li"
+            onclick="scrollToSection('contact', 'center')"
+          >
+            Contacto
           </li>
-          <li class="footer__section__ul--li">
-            <i class="fa-regular fa-envelope"></i>
+          <li
+            class="footer__section__ul--li"
+            onclick="scrollToSection('services', 'center')"
+          >
+            Servicios
           </li>
         </ul>
+        <hr class="footer__section--hr" />
+        <div class="footer__section__div">
+          <h4 class="footer__section__div--h4">Informacion de contacto</h4>
+          <ul class="footer__section__div__ul">
+            <li class="footer__section__div__ul--li">
+              <i class="fa-brands fa-instagram"></i>
+            </li>
+            <li class="footer__section__div__ul--li">
+              <i class="fa-brands fa-x-twitter"></i>
+            </li>
+            <li class="footer__section__div__ul--li">
+              <i class="fa-brands fa-facebook"></i>
+            </li>
+            <li class="footer__section__div__ul--li">
+              <i class="fa-brands fa-whatsapp"></i>
+            </li>
+            <li class="footer__section__div__ul--li">
+              <i class="fa-regular fa-envelope"></i>
+            </li>
+          </ul>
+        </div>
       </section>
-      <marquee direction="right"
-        ><span class="footer--span">
-          Sitio web de AndrevLare ©2024 Todos los Derechos Reservados
-        </span>
-      </marquee>
+      <span class="footer--span">
+        Sitio web de AndrevLare ©2024 Todos los Derechos Reservados
+      </span>
     </footer>
 
     <!--Scripts-->
     <script src="{% static 'js/cardLogic.js' %}"></script>
+    <script src="{% static 'js/navButton.js' %}"></script>
   </body>
 </html>
