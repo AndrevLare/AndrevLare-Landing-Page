@@ -11,22 +11,20 @@ const sections = {
   CTA: document.getElementById("CTA"),
   contact: document.getElementById("contact"),
   services: document.getElementById("services"),
+  socials: document.getElementById("socials"),
 };
 document.addEventListener("click", (event) => {
-  if (active) {
-    const currentTarget = event.target;
-    let isIn;
-    for (Option of options) {
-      if (
-        Option !== currentTarget &&
-        button !== currentTarget &&
-        !barsArray.some((bar) => bar === currentTarget)
-      )
-        isIn = false;
-      else isIn = true;
-    }
-    if (!isIn === true) switchMenu();
-  }
+  const currentTarget = event.target;
+  if (
+    active &&
+    button !== currentTarget &&
+    !barsArray.some((bar) => bar === currentTarget)
+  )
+    switchMenu();
+});
+
+addEventListener("scroll", () => {
+  if (active) switchMenu();
 });
 
 button.addEventListener("click", () => {

@@ -1,0 +1,42 @@
+@media (min-width: 1000px) and (orientation: landscape) {
+  .header {
+    flex-direction: row;
+    padding-inline: 1rem;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+  }
+  .header__div {
+    backdrop-filter: none;
+    width: auto;
+    height: auto;
+    justify-content: center;
+  }
+  .header__div__button {
+    display: none;
+  }
+  .header__nav {
+    position: relative;
+    top: 0;
+    transform-origin: center;
+    transform: scaleY(1);
+    display: flex;
+    justify-content: end;
+  }
+  .header__nav__ul {
+    flex-direction: row;
+    width: auto;
+    gap: 1rem;
+  }
+  .header__nav__ul--li {
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    width: auto;
+  }
+  .nav-li-extra {
+    display: none;
+  }
+}
