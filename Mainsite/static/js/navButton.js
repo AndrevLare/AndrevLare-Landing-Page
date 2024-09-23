@@ -43,5 +43,7 @@ switchMenu = () => {
 
 //scroll
 function scrollToSection(section, block) {
-  sections[section].scrollIntoView({ behavior: "smooth", block: `${block}` });
+  setTimeout(() => {
+    sections[section].scrollIntoView({ behavior: "smooth", block: `${block}` });
+  }, 250);
 }

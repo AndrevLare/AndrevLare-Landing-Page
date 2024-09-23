@@ -90,30 +90,32 @@
     <!--Main-->
     <main class="main">
       <article class="main__home non-mobile-section" id="home">
-        <div class="main__home__div">
-          <img
-            src="{% static 'img/sculture.png' %}"
-            alt="GreekStatue"
-            title="MainImage"
-            class="main__home__div--img"
-          />
-          <span class="main__home__div--span">FULLSTACK DEV</span>
+        <div class="main__home-container">
+          <div class="main__home__div">
+            <img
+              src="{% static 'img/sculture.png' %}"
+              alt="GreekStatue"
+              title="MainImage"
+              class="main__home__div--img"
+            />
+            <span class="main__home__div--span">FULLSTACK DEV</span>
+          </div>
+          <h1 class="main__home--h1">
+            ANDREVLARE <br />
+            <span>WebDev</span>
+          </h1>
+          <p class="main__home--p">
+            En AndrevLare, se diseñan sitios web que conectan con tu público y
+            hacen crecer tu negocio. Potencia tu presencia en línea con
+            creatividad y soluciones a tu medida.
+          </p>
+          <button
+            class="main__home--button"
+            onclick="scrollToSection('contact', 'center')"
+          >
+            Contáctame
+          </button>
         </div>
-        <h1 class="main__home--h1">
-          ANDREVLARE <br />
-          <span>WebDev</span>
-        </h1>
-        <p class="main__home--p">
-          En AndrevLare, se diseñan sitios web que conectan con tu público y
-          hacen crecer tu negocio. Potencia tu presencia en línea con
-          creatividad y soluciones a tu medida.
-        </p>
-        <button
-          class="main__home--button"
-          onclick="scrollToSection('contact', 'center')"
-        >
-          Contáctame
-        </button>
       </article>
 
       <!--Portfolio-->
