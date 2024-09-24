@@ -306,7 +306,7 @@
               />
             </div>
 
-            <div class="main__CTA__form__form__div">
+            <div class="main__CTA__form__form__div form-div-select">
               <label for="service" class="main__CTA__form__form__div--label"
                 ><i class="fa-solid fa-cart-shopping"></i>Servicio</label
               >
@@ -405,7 +405,10 @@
                 Diseño responsive (compatible con múltiples dispositivos).
               </li>
             </ul>
-            <button class="main__services__section__card--button">
+            <button
+              class="main__services__section__card--button"
+              onclick="selectOption(1)"
+            >
               Seleccionar
             </button>
           </div>
@@ -429,7 +432,10 @@
                 Diseño responsive (adaptado a dispositivos móviles).
               </li>
             </ul>
-            <button class="main__services__section__card--button">
+            <button
+              class="main__services__section__card--button"
+              onclick="selectOption(2)"
+            >
               Seleccionar
             </button>
           </div>
@@ -462,7 +468,10 @@
                 Diseño responsive.
               </li>
             </ul>
-            <button class="main__services__section__card--button">
+            <button
+              class="main__services__section__card--button"
+              onclick="selectOption(3)"
+            >
               Seleccionar
             </button>
           </div>
@@ -483,7 +492,10 @@
                 Monitoreo básico del estado del sitio
               </li>
             </ul>
-            <button class="main__services__section__card--button">
+            <button
+              class="main__services__section__card--button"
+              onclick="selectOption(4)"
+            >
               Seleccionar
             </button>
           </div>
@@ -504,7 +516,10 @@
                 Optimización SEO básico
               </li>
             </ul>
-            <button class="main__services__section__card--button">
+            <button
+              class="main__services__section__card--button"
+              onclick="selectOption(5)"
+            >
               Seleccionar
             </button>
           </div>
@@ -543,14 +558,14 @@
             Portafolio
           </li>
           <li
-            class="footer__section__ul--li"
+            class="footer__section__ul--li footer-li-extra"
             onclick="scrollToSection('CTA', 'center')"
           >
             Tener Una Web Importa
           </li>
           <li
             class="footer__section__ul--li"
-            onclick="scrollToSection('contact', 'center')"
+            onclick="scrollToSection('contact', 'start')"
           >
             Contacto
           </li>
@@ -563,39 +578,41 @@
         </ul>
         <hr class="footer__section--hr" />
         <div class="footer__section__div">
-          <h4 class="footer__section__div--h4">Informacion de contacto</h4>
-          <ul class="footer__section__div__ul">
-            <li
-              class="footer__section__div__ul--li"
-              onclick="openLink('instagram')"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </li>
-            <li
-              class="footer__section__div__ul--li"
-              onclick="openLink('twitter')"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </li>
-            <li
-              class="footer__section__div__ul--li"
-              onclick="openLink('facebook')"
-            >
-              <i class="fa-brands fa-facebook"></i>
-            </li>
-            <li
-              class="footer__section__div__ul--li"
-              onclick="openLink('whatsapp')"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-            </li>
-            <li
-              class="footer__section__div__ul--li"
-              onclick="openLink('email')"
-            >
-              <i class="fa-regular fa-envelope"></i>
-            </li>
-          </ul>
+          <div class="footer__section__div-container">
+            <h4 class="footer__section__div--h4">Informacion de contacto</h4>
+            <ul class="footer__section__div__ul">
+              <li
+                class="footer__section__div__ul--li"
+                onclick="openLink('instagram')"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </li>
+              <li
+                class="footer__section__div__ul--li"
+                onclick="openLink('twitter')"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </li>
+              <li
+                class="footer__section__div__ul--li"
+                onclick="openLink('facebook')"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </li>
+              <li
+                class="footer__section__div__ul--li"
+                onclick="openLink('whatsapp')"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </li>
+              <li
+                class="footer__section__div__ul--li"
+                onclick="openLink('email')"
+              >
+                <i class="fa-regular fa-envelope"></i>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <span class="footer--span">
@@ -609,5 +626,6 @@
     <script src="{% static 'js/navButton.js' %}"></script>
     <script src="{% static 'js/navDinamycStyles.js' %}"></script>
     <script src="{% static 'js/openExternalLink.js' %}"></script>
+    <script src="{% static 'js/formLogic&other.js' %}"></script>
   </body>
 </html>

@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navElements[key] = navElement;
   });
-  console.log(navElements);
 
   const options = {
     root: null, // Usa la ventana de visualización como contenedor.
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log(`Estás en: ${entry.target.id}`);
         filteredNavElements.forEach((e) => {
           e.classList.toggle("nav-li-selected", false);
         });
