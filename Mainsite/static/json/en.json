@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "CTA": "Having a website matters",
+    "contact": "Contact",
+    "services": "Services",
+    "socialMedia": "My Social Networks"
+  },
+  "home": {
+    "paragraph": "At AndrevLare, we design websites that connect with your audience and grow your business. Boost your online presence with creativity and tailor-made solutions.",
+    "button": "Contact Me"
+  },
+  "portfolio": {
+    "title": "AndrevLare<br /><span class='main__portfolio--h3--span'><span>Projects</span></span>",
+    "rol": "FullStack Developer",
+    "button": "<i class='fa-solid fa-arrow-up-right-from-square'></i> My Portfolio"
+  },
+  "CTA": {
+    "title": "Having A Website Matters",
+    "card1h3": "Available 24/7",
+    "card1p": "Your online business accessible Anytime, Anywhere.",
+    "card2h3": "Greater Credibility",
+    "card2p": "A well-designed website positions you as a trustworthy professional.",
+    "card3h3": "Global Reach",
+    "card3p": "Expand your market and reach customers around the world.",
+    "card4h3": "Generate Leads",
+    "card4p": "Convert visitors into customers with effective calls to action.",
+    "card5h3": "Powerful Marketing",
+    "card5p": "Optimize SEO and digital advertising strategies to attract more traffic.",
+    "card6h3": "Total Control of Your Brand",
+    "card6p": "Design your image as you want the world to see it."
+  },
+  "contact": {
+    "title": "Take Your Online Presence To The Next Level",
+    "nameLabel": "<i class='fa-solid fa-user'></i> Your name",
+    "mailLabel": "<i class='fa-solid fa-at'></i> Your mail",
+    "serviceLabel": "<i class='fa-solid fa-cart-shopping'></i> Service",
+    "messageLabel": "<i class='fa-solid fa-message'></i> Message",
+    "mailPlaceholder": "example@gmail.com",
+    "messagePlaceholder": "Tell me how you want to take your business or brand to the next level!",
+    "optionDefault": "Select an option",
+    "optionPortfolio": "Portfolio",
+    "optionCorporate": "Corporate Website",
+    "optionMaintenance": "Web Maintenance",
+    "optionOther": "Other",
+    "submit": "Submit"
+  },
+  "socialMedia": {
+    "title": "Follow me on all my social networks or contact me through them!"
+  },
+  "services": {
+    "title": "My Services",
+
+    "1card1": "Single page with content focused on a single objective (promotion of a product or service).",
+    "1card2": "Clear and visible Call to Action (CTA) (such as 'Subscribe', ''Buy now', etc.).",
+    "1card3": "Section of testimonials or success stories.",
+    "1card4": "Lead capture form (name, email, etc.).",
+    "1card5": "Visually appealing design with a focus on conversion.",
+    "1card6": "Basic SEO optimization.",
+    "1card7": "Responsive design (compatible with multiple devices).",
+
+    "portfolio": "Portfolio",
+    "2card1": "Simple page with custom design.",
+    "2card2": "Section to show previous projects or work.",
+    "2card3": "Direct contact (form or link to social networks).",
+    "2card4": "Basic SEO optimization.",
+    "2card5": "Responsive design (compatible with multiple devices).",
+
+    "corporateWebsite": "Corporate Website",
+    "3card1": "Multiple sections: Home, About Us, Services, Blog, Contact, etc.",
+    "3card2": "Professional and personalized design for the brand.",
+    "3card3": "News section or blog.",
+    "3card4": "Contact form.",
+    "3card5": "Gallery or portfolio of services.",
+    "3card6": "Basic SEO optimization.",
+    "3card7": "Responsive design (compatible with multiple devices).",
+
+    "maintenance": "Web Maintenance",
+    "4card1": "Content and text update.",
+    "4card2": "Minor bug fixes or design adjustments.",
+    "4card3": "Complete redesign",
+    "4card4": "Basic site status monitoring",
+
+    "other": "Other",
+    "5card1": "Specific website (whatever you need)",
+    "5card2": "Custom sections",
+    "5card3": "Responsive design",
+    "5card4": "Basic SEO optimization.",
+
+    "button": "Select"
+  },
+  "phrase": {
+    "span": "<span>'</span> I don't program to solve problems, I program to create solutions <span>'</span>"
+  },
+  "footer": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "CTA": "Having a website matters",
+    "contact": "Contact",
+    "services": "Services",
+    "contactInfo": "Contact Information",
+    "copyright": "AndrevLare Website ©2024 All Rights Reserved"
+  }
+}

@@ -140,6 +140,27 @@ img {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+.language__ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  border-bottom: 3px solid var(--green);
+}
+.language__ul li {
+  font-size: 1.5rem;
+  background-color: var(--transparent-black);
+  backdrop-filter: brur(5px);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.language__border {
+  display: none;
+}
+/* Main */
 .main {
   display: flex;
   flex-direction: column;

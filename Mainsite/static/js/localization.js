@@ -27,7 +27,26 @@ changeLanguage = async (target) => {
     // recorre todos los textos y los cambia de idioma
     const section = textToChange.dataset.section;
     const value = textToChange.dataset.value;
-    textToChange.innerHTML = texts[section][value];
+
+    // Si el elemento es un textarea o input de tipo texto, cambia su placeholder
+    if (
+      textToChange.tagName.toLowerCase() === "textarea" ||
+      (textToChange.tagName.toLowerCase() === "input" &&
+        textToChange.type !== "submit")
+    ) {
+      textToChange.placeholder = texts[section][value]; // Actualiza el placeholder
+    }
+    // Si el elemento es un input[type="submit"], cambia su value
+    else if (
+      textToChange.tagName.toLowerCase() === "input" &&
+      textToChange.type === "submit"
+    ) {
+      textToChange.value = texts[section][value]; // Actualiza el value del input submit
+    }
+    // Para los demás elementos, cambia el innerHTML
+    else {
+      textToChange.innerHTML = texts[section][value];
+    }
   }
 };
 

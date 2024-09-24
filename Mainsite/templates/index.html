@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AndrevLare | Desarrollo Web</title>
+    <title>AndrevLare</title>
 
     {# archivos estáticos #}
     <!--Icons-->
@@ -46,40 +46,78 @@
         </button>
       </div>
       <nav class="header__nav">
+        <ul class="language__ul language-en">
+          <div class="language__border">
+            <span class="language__border--span1 border--span"></span>
+            <span class="language__border--span2 border--span"></span>
+            <span class="language__border--span3 border--span"></span>
+            <span class="language__border--span4 border--span"></span>
+          </div>
+          <li>
+            <p
+              class="language__ul__li--p"
+              data-lang="es"
+              onclick="changeLanguage(this)"
+            >
+              ES
+            </p>
+          </li>
+          <li>
+            <p
+              class="language__ul__li--p"
+              data-lang="en"
+              onclick="changeLanguage(this)"
+            >
+              EN
+            </p>
+          </li>
+        </ul>
         <ul class="header__nav__ul">
           <li
             class="header__nav__ul--li"
             onclick="scrollToSection('home', 'start')"
+            data-section="nav"
+            data-value="home"
           >
             Inicio
           </li>
           <li
             class="header__nav__ul--li"
             onclick="scrollToSection('portfolio', 'center')"
+            data-section="nav"
+            data-value="portfolio"
           >
             Portafolio
           </li>
           <li
             class="header__nav__ul--li nav-li-extra"
             onclick="scrollToSection('CTA', 'start')"
+            data-section="nav"
+            data-value="CTA"
           >
             Tener Una Web Importa
           </li>
           <li
             class="header__nav__ul--li"
             onclick="scrollToSection('contact', 'start')"
+            data-section="nav"
+            data-value="contact"
           >
             Contacto
           </li>
           <li
             class="header__nav__ul--li"
             onclick="scrollToSection('services', 'start')"
+            data-section="nav"
+            data-value="services"
           >
             Servicios
           </li>
           <li
             class="header__nav__ul--li nav-li-extra"
             onclick="scrollToSection('socials', 'center')"
+            data-section="nav"
+            data-value="socialMedia"
           >
             Mis Redes Sociales
           </li>
@@ -104,7 +142,7 @@
             ANDREVLARE <br />
             <span>WebDev</span>
           </h1>
-          <p class="main__home--p">
+          <p class="main__home--p" data-section="home" data-value="paragraph">
             En AndrevLare, se diseñan sitios web que conectan con tu público y
             hacen crecer tu negocio. Potencia tu presencia en línea con
             creatividad y soluciones a tu medida.
@@ -112,6 +150,8 @@
           <button
             class="main__home--button"
             onclick="scrollToSection('contact', 'start')"
+            data-section="home"
+            data-value="button"
           >
             Contáctame
           </button>
@@ -121,7 +161,11 @@
       <!--Portfolio-->
       <article class="main__portfolio non-mobile-section" id="portfolio">
         <div class="main__portfolio-container">
-          <h3 class="main__portfolio--h3">
+          <h3
+            class="main__portfolio--h3"
+            data-section="portfolio"
+            data-value="title"
+          >
             Proyectos<br />
             <span class="main__portfolio--h3--span"
               ><span>de</span> AndrevLare</span
@@ -148,7 +192,11 @@
                     <span class="card-front__div-grid__name--span1"></span>
                   </div>
                   <div class="card-front__div-grid__skill">
-                    <p class="card-front__div-grid__skill--p">
+                    <p
+                      class="card-front__div-grid__skill--p"
+                      data-section="portfolio"
+                      data-value="rol"
+                    >
                       Fullstack Developer
                     </p>
                     <span class="card-front__div-grid__skill--span0"></span>
@@ -184,7 +232,10 @@
                     <span class="card-back__container__about--AndrevLare"
                       >AndrevLare</span
                     >
-                    <span class="card-back__container__about--fullstack"
+                    <span
+                      class="card-back__container__about--fullstack"
+                      data-section="portfolio"
+                      data-value="rol"
                       >Desarrollador Fullstack</span
                     >
                   </div>
@@ -223,6 +274,8 @@
           <button
             class="main__portfolio--button"
             onclick="openLink('portfolio')"
+            data-section="portfolio"
+            data-value="button"
           >
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
             Mi Portfolio
@@ -233,55 +286,77 @@
       <!--CTA-->
       <article class="main__CTA">
         <section class="main__CTA__section non-mobile-section" id="CTA">
-          <h2 class="main__CTA__section--h2">¡Tener Una Web Si Importa!</h2>
+          <h2
+            class="main__CTA__section--h2"
+            data-section="CTA"
+            data-value="title"
+          >
+            ¡Tener Una Web Si Importa!
+          </h2>
           <ul class="main__CTA__section__ul">
             <li class="main__CTA__section__ul--li">
-              <h3>Disponible 24/7</h3>
-              <p>
+              <h3 data-section="CTA" data-value="card1h3">Disponible 24/7</h3>
+              <p data-section="CTA" data-value="card1p">
                 Tu negocio online accesible a cualquier hora, desde cualquier
                 lugar.
               </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <h3>Mayor Credibilidad</h3>
-              <p>
+              <h3 data-section="CTA" data-value="card2h3">
+                Mayor Credibilidad
+              </h3>
+              <p data-section="CTA" data-value="card2p">
                 Una web bien diseñada te posiciona como un profesional
                 confiable.
               </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <h3>Alcance Global</h3>
-              <p>Expande tu mercado y llega a clientes de todo el mundo.</p>
+              <h3 data-section="CTA" data-value="card3h3">Alcance Global</h3>
+              <p data-section="CTA" data-value="card3p">
+                Expande tu mercado y llega a clientes de todo el mundo.
+              </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <h3>Genera Leads</h3>
-              <p>
+              <h3 data-section="CTA" data-value="card4h3">Genera Leads</h3>
+              <p data-section="CTA" data-value="card4p">
                 Convierte visitantes en clientes con llamadas a la acción
                 efectivas.
               </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <h3>Marketing Potente</h3>
-              <p>
+              <h3 data-section="CTA" data-value="card5h3">Marketing Potente</h3>
+              <p data-section="CTA" data-value="card5p">
                 Optimiza estrategias de SEO y publicidad digital para atraer más
                 tráfico.
               </p>
             </li>
             <li class="main__CTA__section__ul--li">
-              <h3>Control Total de Tu Marca</h3>
-              <p>Diseña tu imagen como quieres que el mundo la vea.</p>
+              <h3 data-section="CTA" data-value="card6h3">
+                Control Total de Tu Marca
+              </h3>
+              <p data-section="CTA" data-value="card6p">
+                Diseña tu imagen como quieres que el mundo la vea.
+              </p>
             </li>
           </ul>
         </section>
         <section class="main__CTA__form" id="contact">
-          <h2 class="main__CTA__form--h2">
+          <h2
+            class="main__CTA__form--h2"
+            data-section="contact"
+            data-value="title"
+          >
             Lleva Tu Presencia En Línea A Otro Nivel
           </h2>
           <form method="post" class="main__CTA__form__form" autocomplete="off">
             {% csrf_token %}
 
             <div class="main__CTA__form__form__div">
-              <label for="name" class="main__CTA__form__form__div--label"
+              <label
+                for="name"
+                class="main__CTA__form__form__div--label"
+                data-section="contact"
+                data-value="nameLabel"
                 ><i class="fa-solid fa-user"></i>Tu nombre</label
               >
               <input
@@ -294,41 +369,86 @@
             </div>
 
             <div class="main__CTA__form__form__div">
-              <label for="mail" class="main__CTA__form__form__div--label"
+              <label
+                for="mail"
+                class="main__CTA__form__form__div--label"
+                data-section="contact"
+                data-value="mailLabel"
                 ><i class="fa-solid fa-at"></i>Tu correo</label
               >
               <input
                 name="mail"
                 id="mail"
                 type="mail"
-                placeholder="ejemplo@gmail.com"
+                data-section="contact"
+                data-value="mailPlaceholder"
+                placeholder="example@gmail.com"
                 required
               />
             </div>
 
             <div class="main__CTA__form__form__div form-div-select">
-              <label for="service" class="main__CTA__form__form__div--label"
+              <label
+                for="service"
+                class="main__CTA__form__form__div--label"
+                data-section="contact"
+                data-value="serviceLabel"
                 ><i class="fa-solid fa-cart-shopping"></i>Servicio</label
               >
               <select name="service" id="service" required>
-                <option disabled selected>Selecciona un servicio</option>
+                <option
+                  disabled
+                  selected
+                  data-section="contact"
+                  data-value="optionDefault"
+                >
+                  Selecciona un servicio
+                </option>
                 <option value="Landing-Page">Landing Page</option>
-                <option value="Portfolio">Portfolio</option>
-                <option value="Stitio-Web-Corporativo">
+                <option
+                  value="Portfolio"
+                  data-section="contact"
+                  data-value="optionPortfolio"
+                >
+                  Portfolio
+                </option>
+                <option
+                  value="corporate-website"
+                  data-section="contact"
+                  data-value="optionCorporate"
+                >
                   Sitio Web Corporativo
                 </option>
-                <option value="Mantenimiento-Web">Mantenimiento Web</option>
-                <option value="Otro">Otro</option>
+                <option
+                  value="maintenance"
+                  data-section="contact"
+                  data-value="optionMaintenance"
+                >
+                  Mantenimiento Web
+                </option>
+                <option
+                  value="Other"
+                  data-section="contact"
+                  data-value="optionOther"
+                >
+                  Otro
+                </option>
               </select>
             </div>
 
             <div class="main__CTA__form__form__div">
-              <label for="message" class="main__CTA__form__form__div--label"
+              <label
+                for="message"
+                class="main__CTA__form__form__div--label"
+                data-section="contact"
+                data-value="messageLabel"
                 ><i class="fa-solid fa-message"></i> Mensaje</label
               >
               <textarea
                 name="message"
                 id="message"
+                data-section="contact"
+                data-value="messagePlaceholder"
                 placeholder="¡Hablame de como deseas llevar negocio o marca al siguiente nivel!"
                 required
               ></textarea>
@@ -336,6 +456,8 @@
             <input
               type="submit"
               class="main__CTA__form__form--submit"
+              data-section="contact"
+              data-value="submit"
               value="Enviar"
             />
           </form>
@@ -344,7 +466,11 @@
 
       <!--Social Media-->
       <article class="main__social-media" id="socials">
-        <h3 class="main__social-media--h3">
+        <h3
+          class="main__social-media--h3"
+          data-section="socialMedia"
+          data-value="title"
+        >
           ¡Sigeme en todas mis redes o contáctame por ellas!
         </h3>
         <ul class="main__social-media__ul">
@@ -374,151 +500,297 @@
 
       <!--Services-->
       <article class="main__services non-mobile-section" id="services">
-        <h2 class="main__services--h2">Mis Servicios</h2>
+        <h2
+          class="main__services--h2"
+          data-section="services"
+          data-value="title"
+        >
+          Mis Servicios
+        </h2>
         <section class="main__services__section">
           <div class="main__services__section__card">
             <i class="fa-solid fa-plane-arrival"></i>
             <h3 class="main__services__section__card--h3">Landing Page</h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="1card1"
+              >
                 Página única con contenido enfocado en un solo objetivo
                 (promoción de un producto o servicio).
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="1card2"
+              >
                 Call to Action (CTA) claro y visible (como "Suscríbete", "Compra
                 ahora", etc.).
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="1card3"
+              >
                 Sección de testimonios o casos de éxito.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="1card4"
+              >
                 Formulario de captura de leads (nombre, correo electrónico,
                 etc.).
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="1card5"
+              >
                 Diseño visualmente atractivo con enfoque en la conversión.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="1card6"
+              >
                 Optimización básica para SEO.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="1card7"
+              >
                 Diseño responsive (compatible con múltiples dispositivos).
               </li>
             </ul>
             <button
               class="main__services__section__card--button"
               onclick="selectOption(1)"
+              data-section="services"
+              data-value="button"
             >
               Seleccionar
             </button>
           </div>
           <div class="main__services__section__card">
             <i class="fa-solid fa-briefcase"></i>
-            <h3 class="main__services__section__card--h3">Portafolio</h3>
+            <h3
+              class="main__services__section__card--h3"
+              data-section="services"
+              data-value="portfolio"
+            >
+              Portafolio
+            </h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="2card1"
+              >
                 Página sencilla con diseño personalizado.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="2card2"
+              >
                 Sección para mostrar proyectos o trabajos anteriores.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="2card3"
+              >
                 Contacto directo (formulario o enlace a redes sociales).
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="2card4"
+              >
                 Optimización básica para SEO.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="2card5"
+              >
                 Diseño responsive (adaptado a dispositivos móviles).
               </li>
             </ul>
             <button
               class="main__services__section__card--button"
               onclick="selectOption(2)"
+              data-section="services"
+              data-value="button"
             >
               Seleccionar
             </button>
           </div>
           <div class="main__services__section__card">
             <i class="fa-solid fa-city"></i>
-            <h3 class="main__services__section__card--h3">
+            <h3
+              class="main__services__section__card--h3"
+              data-section="services"
+              data-value="corporateWebsite"
+            >
               Sitio Web Corporativo
             </h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="3card1"
+              >
                 Múltiples secciones: Home, Sobre Nosotros, Servicios, Blog,
                 Contacto, etc.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="3card2"
+              >
                 Diseño profesional y personalizado para la marca.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="3card3"
+              >
                 Sección de noticias o blog.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="3card4"
+              >
                 Formulario de contacto.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="3card5"
+              >
                 Galería o portafolio de servicios.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="3card6"
+              >
                 Optimización básica para SEO.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="3card7"
+              >
                 Diseño responsive.
               </li>
             </ul>
             <button
               class="main__services__section__card--button"
               onclick="selectOption(3)"
+              data-section="services"
+              data-value="button"
             >
               Seleccionar
             </button>
           </div>
           <div class="main__services__section__card">
             <i class="fa-solid fa-gears"></i>
-            <h3 class="main__services__section__card--h3">Mantenimiento Web</h3>
+            <h3
+              class="main__services__section__card--h3"
+              data-section="services"
+              data-value="maintenance"
+            >
+              Mantenimiento Web
+            </h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="4card1"
+              >
                 Actualización de contenido y textos.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="4card2"
+              >
                 Corrección de errores menores o ajustes de diseño.
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="4card3"
+              >
                 Rediseño total
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="4card4"
+              >
                 Monitoreo básico del estado del sitio
               </li>
             </ul>
             <button
               class="main__services__section__card--button"
               onclick="selectOption(4)"
+              data-section="services"
+              data-value="button"
             >
               Seleccionar
             </button>
           </div>
           <div class="main__services__section__card">
             <i class="fa-solid fa-code"></i>
-            <h3 class="main__services__section__card--h3">Otro</h3>
+            <h3
+              class="main__services__section__card--h3"
+              data-section="services"
+              data-value="other"
+            >
+              Otro
+            </h3>
             <ul class="main__services__section__card__ul">
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="5card1"
+              >
                 Sitio web especifico (lo que necesites)
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="5card2"
+              >
                 Secciones personalizadas
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="5card3"
+              >
                 Diseño responsive
               </li>
-              <li class="main__services__section__card__ul--li">
+              <li
+                class="main__services__section__card__ul--li"
+                data-section="services"
+                data-value="5card4"
+              >
                 Optimización SEO básico
               </li>
             </ul>
             <button
               class="main__services__section__card--button"
               onclick="selectOption(5)"
+              data-section="services"
+              data-value="button"
             >
               Seleccionar
             </button>
@@ -528,9 +800,8 @@
 
       <!--Phrase-->
       <article class="main__phrase">
-        <h3 class="main__phrase--h3">
-          <span>"</span> Yo no programo para solucionar problemas, programo para
-          crear soluciones <span>"</span>
+        <h3 class="main__phrase--h3" data-section="phrase" data-value="span">
+          py
         </h3>
       </article>
     </main>
@@ -548,17 +819,23 @@
           <li
             class="footer__section__ul--li"
             onclick="scrollToSection('home', 'start')"
+            data-section="footer"
+            data-value="home"
           >
             Inicio
           </li>
           <li
             class="footer__section__ul--li"
             onclick="scrollToSection('portfolio', 'center')"
+            data-section="footer"
+            data-value="portfolio"
           >
             Portafolio
           </li>
           <li
             class="footer__section__ul--li footer-li-extra"
+            data-section="footer"
+            data-value="CTA"
             onclick="scrollToSection('CTA', 'center')"
           >
             Tener Una Web Importa
@@ -566,12 +843,16 @@
           <li
             class="footer__section__ul--li"
             onclick="scrollToSection('contact', 'start')"
+            data-section="footer"
+            data-value="contact"
           >
             Contacto
           </li>
           <li
             class="footer__section__ul--li"
             onclick="scrollToSection('services', 'center')"
+            data-section="footer"
+            data-value="services"
           >
             Servicios
           </li>
@@ -579,7 +860,13 @@
         <hr class="footer__section--hr" />
         <div class="footer__section__div">
           <div class="footer__section__div-container">
-            <h4 class="footer__section__div--h4">Informacion de contacto</h4>
+            <h4
+              class="footer__section__div--h4"
+              data-section="footer"
+              data-value="contactInfo"
+            >
+              Informacion de contacto
+            </h4>
             <ul class="footer__section__div__ul">
               <li
                 class="footer__section__div__ul--li"
@@ -615,7 +902,7 @@
           </div>
         </div>
       </section>
-      <span class="footer--span">
+      <span class="footer--span" data-section="footer" data-value="copyright">
         Sitio web de AndrevLare ©2024 Todos los Derechos Reservados
       </span>
     </footer>
@@ -627,5 +914,6 @@
     <script src="{% static 'js/navDinamycStyles.js' %}"></script>
     <script src="{% static 'js/openExternalLink.js' %}"></script>
     <script src="{% static 'js/formLogic&other.js' %}"></script>
+    <script src="{% static 'js/localization.js' %}"></script>
   </body>
 </html>
