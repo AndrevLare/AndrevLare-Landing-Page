@@ -67,7 +67,7 @@
           </li>
           <li
             class="header__nav__ul--li"
-            onclick="scrollToSection('contact', 'center')"
+            onclick="scrollToSection('contact', 'start')"
           >
             Contacto
           </li>
@@ -78,7 +78,7 @@
             Servicios
           </li>
           <li
-            class="header__nav__ul--li"
+            class="header__nav__ul--li nav-li-extra"
             onclick="scrollToSection('socials', 'center')"
           >
             Mis Redes Sociales
@@ -111,7 +111,7 @@
           </p>
           <button
             class="main__home--button"
-            onclick="scrollToSection('contact', 'center')"
+            onclick="scrollToSection('contact', 'start')"
           >
             Contáctame
           </button>
@@ -120,106 +120,114 @@
 
       <!--Portfolio-->
       <article class="main__portfolio non-mobile-section" id="portfolio">
-        <h3 class="main__portfolio--h3">
-          <span>AndrevLare</span> y sus <span>Proyectos</span>
-        </h3>
+        <div class="main__portfolio-container">
+          <h3 class="main__portfolio--h3">
+            Proyectos<br />
+            <span class="main__portfolio--h3--span"
+              ><span>de</span> AndrevLare</span
+            >
+          </h3>
 
-        <div class="main__portfolio__card-container" onclick="flipCard()">
-          <div class="card">
-            <!-- Frente de la tarjeta -->
-            <div class="card-side card-front">
-              <div class="card-front__div"><span>ID Card</span></div>
-              <div class="card-front__div-grid">
-                <div class="card-front__div-grid__img">
-                  <img
-                    src="{% static 'img/AndrevLare/AndrevLare-Avatar.jpg' %}"
-                    alt="AndrevLare Avatar"
-                    title="AndrevLare"
-                    class="card-front__div-grid__img--img"
-                  />
-                </div>
-                <div class="card-front__div-grid__name">
-                  <p class="card-front__div-grid__name--p">AndrevLare</p>
-                  <span class="card-front__div-grid__name--span0"></span>
-                  <span class="card-front__div-grid__name--span1"></span>
-                </div>
-                <div class="card-front__div-grid__skill">
-                  <p class="card-front__div-grid__skill--p">
-                    Fullstack Developer
-                  </p>
-                  <span class="card-front__div-grid__skill--span0"></span>
-                  <span class="card-front__div-grid__skill--span1"></span>
-                </div>
-                <div class="card-front__div-grid__sign">
-                  <img
-                    src="{% static 'img/sign.png' %}"
-                    alt="sign"
-                    title="sign"
-                  />
-                </div>
-                <div class="card-front__div-grid__bars-code"></div>
-                <div class="card-front__div-grid__click">
-                  <i
-                    class="fa-solid fa-hand-pointer card-front__div-grid__click--i"
-                  ></i>
-                  <span class="card-front__div-grid__click--span">Click</span>
+          <div class="main__portfolio__card-container" onclick="flipCard()">
+            <div class="card">
+              <!-- Frente de la tarjeta -->
+              <div class="card-side card-front">
+                <div class="card-front__div"><span>ID Card</span></div>
+                <div class="card-front__div-grid">
+                  <div class="card-front__div-grid__img">
+                    <img
+                      src="{% static 'img/AndrevLare/AndrevLare-Avatar.jpg' %}"
+                      alt="AndrevLare Avatar"
+                      title="AndrevLare"
+                      class="card-front__div-grid__img--img"
+                    />
+                  </div>
+                  <div class="card-front__div-grid__name">
+                    <p class="card-front__div-grid__name--p">AndrevLare</p>
+                    <span class="card-front__div-grid__name--span0"></span>
+                    <span class="card-front__div-grid__name--span1"></span>
+                  </div>
+                  <div class="card-front__div-grid__skill">
+                    <p class="card-front__div-grid__skill--p">
+                      Fullstack Developer
+                    </p>
+                    <span class="card-front__div-grid__skill--span0"></span>
+                    <span class="card-front__div-grid__skill--span1"></span>
+                  </div>
+                  <div class="card-front__div-grid__sign">
+                    <img
+                      src="{% static 'img/sign.png' %}"
+                      alt="sign"
+                      title="sign"
+                    />
+                  </div>
+                  <div class="card-front__div-grid__bars-code"></div>
+                  <div class="card-front__div-grid__click">
+                    <i
+                      class="fa-solid fa-hand-pointer card-front__div-grid__click--i"
+                    ></i>
+                    <span class="card-front__div-grid__click--span">Click</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Reverso de la tarjeta -->
-            <div class="card-side card-back">
-              <div class="card-back__container">
-                <div class="card-back__container__logo">
-                  <img
-                    src="{% static 'img/AndrevLare/LogoAndrevLareTextLess.svg' %}"
-                    alt="AndrevLareLogo"
-                    title="AndrevLare Logo"
-                  />
-                </div>
-                <div class="card-back__container__about">
-                  <span class="card-back__container__about--AndrevLare"
-                    >AndrevLare</span
-                  >
-                  <span class="card-back__container__about--fullstack"
-                    >Desarrollador Fullstack</span
-                  >
-                </div>
-                <div class="card-back__container__skills">
-                  <h4 class="card-back__container__skills--h4">Skills</h4>
-                  <ul class="card-back__container__skills__ul">
-                    <li class="card-back__container__skills__ul--li">
-                      <i class="fa-brands fa-html5"></i>
-                    </li>
-                    <li class="card-back__container__skills__ul--li">
-                      <i class="fa-brands fa-css3-alt"></i>
-                    </li>
-                    <li class="card-back__container__skills__ul--li">
-                      <i class="fa-brands fa-js"></i>
-                    </li>
-                    <li class="card-back__container__skills__ul--li">
-                      <i class="fa-brands fa-python"></i>
-                    </li>
-                    <li class="card-back__container__skills__ul--li-">
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="m11.146 0h3.924v18.165c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.001 2.65-6.6 6.753-6.6.637 0 1.121.051 1.707.204zm0 9.143a3.894 3.894 0 0 0 -1.325-.204c-1.988 0-3.134 1.223-3.134 3.364 0 2.09 1.096 3.236 3.109 3.236.433 0 .79-.025 1.35-.102v-6.295zm10.168-3.083v9.097c0 3.134-.229 4.638-.917 5.937-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.529 3.109-2.625.561-1.121.739-2.421.739-5.835v-7.747h3.924zm-3.924-6.039h3.924v4.026h-3.924z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </li>
-                  </ul>
+              <!-- Reverso de la tarjeta -->
+              <div class="card-side card-back">
+                <div class="card-back__container">
+                  <div class="card-back__container__logo">
+                    <img
+                      src="{% static 'img/AndrevLare/LogoAndrevLareTextLess.svg' %}"
+                      alt="AndrevLareLogo"
+                      title="AndrevLare Logo"
+                    />
+                  </div>
+                  <div class="card-back__container__about">
+                    <span class="card-back__container__about--AndrevLare"
+                      >AndrevLare</span
+                    >
+                    <span class="card-back__container__about--fullstack"
+                      >Desarrollador Fullstack</span
+                    >
+                  </div>
+                  <div class="card-back__container__skills">
+                    <h4 class="card-back__container__skills--h4">Skills</h4>
+                    <ul class="card-back__container__skills__ul">
+                      <li class="card-back__container__skills__ul--li">
+                        <i class="fa-brands fa-html5"></i>
+                      </li>
+                      <li class="card-back__container__skills__ul--li">
+                        <i class="fa-brands fa-css3-alt"></i>
+                      </li>
+                      <li class="card-back__container__skills__ul--li">
+                        <i class="fa-brands fa-js"></i>
+                      </li>
+                      <li class="card-back__container__skills__ul--li">
+                        <i class="fa-brands fa-python"></i>
+                      </li>
+                      <li class="card-back__container__skills__ul--li-">
+                        <svg
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="m11.146 0h3.924v18.165c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.001 2.65-6.6 6.753-6.6.637 0 1.121.051 1.707.204zm0 9.143a3.894 3.894 0 0 0 -1.325-.204c-1.988 0-3.134 1.223-3.134 3.364 0 2.09 1.096 3.236 3.109 3.236.433 0 .79-.025 1.35-.102v-6.295zm10.168-3.083v9.097c0 3.134-.229 4.638-.917 5.937-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.529 3.109-2.625.561-1.121.739-2.421.739-5.835v-7.747h3.924zm-3.924-6.039h3.924v4.026h-3.924z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <button
+            class="main__portfolio--button"
+            onclick="openLink('portfolio')"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Mi Portfolio
+          </button>
         </div>
-        <button class="main__portfolio--button" onclick="openLink('portfolio')">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          Mi Portfolio
-        </button>
       </article>
 
       <!--CTA-->
@@ -335,7 +343,7 @@
       </article>
 
       <!--Social Media-->
-      <article class="main__social-media non-mobile-section" id="socials">
+      <article class="main__social-media" id="socials">
         <h3 class="main__social-media--h3">
           ¡Sigeme en todas mis redes o contáctame por ellas!
         </h3>
@@ -514,13 +522,13 @@
 
     <!--Footer-->
     <footer class="footer">
-      <img
-        src="{% static 'img/AndrevLare/LogoAndrevLareBGLess.webp' %}"
-        alt="LogoAndrevLare"
-        title="Logo AndrevLare"
-        class="footer--img"
-      />
       <section class="footer__section">
+        <img
+          src="{% static 'img/AndrevLare/LogoAndrevLareBGLess.png' %}"
+          alt="LogoAndrevLare"
+          title="Logo AndrevLare"
+          class="footer--img"
+        />
         <ul class="footer__section__ul">
           <li
             class="footer__section__ul--li"
@@ -596,6 +604,7 @@
     </footer>
 
     <!--Scripts-->
+    <script src="{% static 'js/mediaQuerisMatches.js' %}"></script>
     <script src="{% static 'js/cardLogic.js' %}"></script>
     <script src="{% static 'js/navButton.js' %}"></script>
     <script src="{% static 'js/navDinamycStyles.js' %}"></script>

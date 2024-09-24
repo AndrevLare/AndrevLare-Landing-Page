@@ -6,10 +6,12 @@ let isFliped = false;
 
 //Girar la targeta con click (Solo Movil)
 const flipCard = () => {
-  if (isFliped) {
-    card.classList.remove("flip-card");
-  } else {
-    card.classList.add("flip-card");
+  if (!consultMedia()) {
+    if (isFliped) {
+      card.classList.remove("flip-card");
+    } else {
+      card.classList.add("flip-card");
+    }
+    isFliped = !isFliped;
   }
-  isFliped = !isFliped;
 };
