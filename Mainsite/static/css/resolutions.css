@@ -341,11 +341,8 @@
     gap: 0.4rem;
     padding-right: 0.25rem;
   }
-  .main__CTA__form__form--submit {
-    scale: 0.75;
-  }
   .main__CTA__form__form--submit:hover {
-    scale: 0.85;
+    scale: 0.95;
   }
 
   /* Social */

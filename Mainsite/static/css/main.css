@@ -440,6 +440,38 @@ img {
 .main__CTA__form__form__div select:focus {
   border-color: var(--green);
 }
+.main__CTA__form__form--submit {
+  margin-bottom: 1rem;
+}
+.response {
+  color: var(--main-white);
+  text-align: center;
+  font-size: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+.response-success {
+  opacity: 0;
+  font-size: 1rem;
+  font-weight: 550;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: var(--green);
+  color: var(--main-black);
+  animation: response-fade-in 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+.response-failure {
+  opacity: 0;
+  font-size: 1rem;
+  font-weight: 550;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: var(--amethyst);
+  color: var(--main-black);
+  animation: response-fade-in 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
 
 /* Portfolio */
 .main__portfolio {

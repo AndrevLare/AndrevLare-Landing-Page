@@ -4,8 +4,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AndrevLare</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <meta
+      name="description"
+      content="AndrevLare - Desarrollo y diseño de páginas web creativas y personalizadas. Portafolio y servicios disponibles."
+    />
+    <meta
+      name="keywords"
+      content="desarrollo web, diseño web, portafolio, AndrevLare, servicios web, programación, desarrollo de aplicaciones"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="AndrevLare - Desarrollo Web" />
+    <meta
+      property="og:description"
+      content="Portafolio y servicios de desarrollo web personalizados y creativos."
+    />
+    <meta
+      property="og:image"
+      content="{% static 'img/AndrevLare/LogoAndrevLareBGLess.png' %}"
+    />
+    <meta property="og:url" content="https://andrevlare.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AndrevLare - Desarrollo Web" />
+    <meta
+      name="twitter:description"
+      content="Portafolio y servicios de desarrollo web personalizados y creativos."
+    />
+    <meta
+      name="twitter:image"
+      content="{% static 'img/AndrevLare/LogoAndrevLareBGLess.png' %}"
+    />
+
+    <link rel="canonical" href="https://andrevlare.com/" />
+
+    <title>AndrevLare - Desarrollo y Diseño Web Creativo</title>
 
     {# archivos estáticos #}
     <!--Icons-->
@@ -348,7 +387,7 @@
           >
             Lleva Tu Presencia En Línea A Otro Nivel
           </h2>
-          <form method="post" class="main__CTA__form__form" autocomplete="off">
+          <form id="form" class="main__CTA__form__form" autocomplete="off">
             {% csrf_token %}
 
             <div class="main__CTA__form__form__div">
@@ -461,6 +500,7 @@
               value="Enviar"
             />
           </form>
+          <div class="response"></div>
         </section>
       </article>
 
@@ -908,11 +948,11 @@
     </footer>
 
     <!--Scripts-->
-    <script src="{% static 'js/mediaQuerisMatches.js' %}"></script>
-    <script src="{% static 'js/cardLogic.js' %}"></script>
-    <script src="{% static 'js/navButton.js' %}"></script>
-    <script src="{% static 'js/navDinamycStyles.js' %}"></script>
-    <script src="{% static 'js/openExternalLink.js' %}"></script>
+    <script defer src="{% static 'js/mediaQuerisMatches.js' %}"></script>
+    <script defer src="{% static 'js/cardLogic.js' %}"></script>
+    <script defer src="{% static 'js/navButton.js' %}"></script>
+    <script defer src="{% static 'js/navDinamycStyles.js' %}"></script>
+    <script defer src="{% static 'js/openExternalLink.js' %}"></script>
     <script src="{% static 'js/formLogic&other.js' %}"></script>
     <script src="{% static 'js/localization.js' %}"></script>
   </body>

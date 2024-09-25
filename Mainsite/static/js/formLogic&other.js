@@ -1,6 +1,8 @@
 const formContainer = document.getElementById("contact");
 const formDivSelect = document.querySelector(".form-div-select");
 const select = document.getElementById("service");
+const form = document.getElementById("form");
+const response = document.querySelector(".response");
 
 /* SERVICE */
 
@@ -42,3 +44,37 @@ const selectOption = (i) => {
   formContainer.scrollIntoView({ behavior: "smooth", block: `start` });
   startAnimation();
 };
+
+// Enviar datos del formulario
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevenir el envío del formulario tradicional
+  response.innerHTML = "<i class='fa-solid fa-hourglass-half fa-flip'></i>";
+
+  let formData = new FormData(this);
+
+  select.classList.remove("selected");
+  form.reset();
+
+  fetch("/form-submit/", {
+    method: "POST",
+    body: formData,
+    headers: {
+      "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value, // Django CSRF token
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        response.innerHTML =
+          "<span class='response-success'>Mensaje enviado con exito</span>";
+      } else {
+        response.innerHTML =
+          "<span class='response-failure'>Error al enviar el mensaje.</span>";
+      }
+    })
+    .catch((error) => {
+      response.innerHTML =
+        "<span class='response-failure'>Error al enviar el mensaje.</span>";
+      console.error("Error Marica ): :", error);
+    });
+});
