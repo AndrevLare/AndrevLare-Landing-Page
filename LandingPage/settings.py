@@ -143,5 +143,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'glstudioandrevlare@gmail.com'
-EMAIL_HOST_PASSWORD = 'pdvykpmvyceihwzq'
+EMAIL_HOST_PASSWORD = os.environ.get('MAIL-PASSWORD')
 DEFAULT_FROM_EMAIL = 'glstudioandrevlare@gmail.com'
