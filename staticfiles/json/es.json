@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "CTA": "Tener Una Web Importa",
+    "contact": "Contacto",
+    "services": "Servicios",
+    "socialMedia": "Mis Redes Sociales"
+  },
+  "home": {
+    "paragraph": "En AndrevLare, se diseñan sitios web que conectan con tu público y hacen crecer tu negocio. Potencia tu presencia en línea con creatividad y soluciones a tu medida.",
+    "button": "Contáctame"
+  },
+  "portfolio": {
+    "title": "Proyectos<br /><span class='main__portfolio--h3--span'><span>de</span> AndrevLare</span>",
+    "rol": "Desarrollador FullStack",
+    "button": "<i class='fa-solid fa-arrow-up-right-from-square'></i> Mi Portafolio"
+  },
+  "CTA": {
+    "title": "¡Tener Una Web Si Importa!",
+    "card1h3": "Disponible 24/7",
+    "card1p": "Tu negocio online accesible a cualquier hora, desde cualquier lugar.",
+    "card2h3": "Mayor Credibilidad",
+    "card2p": "Una web bien diseñada te posiciona como un profesional confiable.",
+    "card3h3": "Alcance Global",
+    "card3p": "Expande tu mercado y llega a clientes de todo el mundo.",
+    "card4h3": "Genera Leads",
+    "card4p": "Convierte visitantes en clientes con llamadas a la acción efectivas.",
+    "card5h3": "Marketing Potente",
+    "card5p": "Optimiza estrategias de SEO y publicidad digital para atraer más tráfico.",
+    "card6h3": "Control Total de Tu Marca",
+    "card6p": "Diseña tu imagen como quieres que el mundo la vea."
+  },
+  "contact": {
+    "title": "Lleva Tu Presencia En Línea A Otro Nivel",
+    "nameLabel": "<i class='fa-solid fa-user'></i> Tu nombre",
+    "mailLabel": "<i class='fa-solid fa-at'></i> Tu correo",
+    "serviceLabel": "<i class='fa-solid fa-cart-shopping'></i>Servicio",
+    "messageLabel": "<i class='fa-solid fa-message'></i> Mensaje",
+    "mailPlaceholder": "ejemplo@gmail.com",
+    "messagePlaceholder": "¡Hablame de como deseas llevar tu negocio o marca al siguiente nivel!",
+    "optionDefault": "Selecciona un servicio",
+    "optionPortfolio": "Portafolio",
+    "optionCorporate": "Sitio Web Corporativo",
+    "optionMaintenance": "Mantenimiento Web",
+    "optionOther": "Otro",
+    "submit": "Enviar"
+  },
+  "socialMedia": {
+    "title": "¡Sigeme en todas mis redes o contáctame por ellas!"
+  },
+  "services": {
+    "title": "Mis Servicios",
+
+    "1card1": "Página única con contenido enfocado en un solo objetivo (promoción de un producto o servicio).",
+    "1card2": "Call to Action (CTA) claro y visible (como 'Suscríbete', 'Compra ahora', etc.).",
+    "1card3": "Sección de testimonios o casos de éxito.",
+    "1card4": "Formulario de captura de leads (nombre, correo electrónico, etc.).",
+    "1card5": "Diseño visualmente atractivo con enfoque en la conversión.",
+    "1card6": "Optimización básica para SEO.",
+    "1card7": "Diseño responsive (compatible con múltiples dispositivos).",
+
+    "portfolio": "Portafolio",
+    "2card1": "Página sencilla con diseño personalizado.",
+    "2card2": "Sección para mostrar proyectos o trabajos anteriores.",
+    "2card3": "Contacto directo (formulario o enlace a redes sociales).",
+    "2card4": "Optimización básica para SEO.",
+    "2card5": "Diseño responsive (adaptado a dispositivos móviles).",
+
+    "corporateWebsite": "Sitio Web Corporativo",
+    "3card1": "Múltiples secciones: Inicio, Sobre Nosotros, Servicios, Blog, Contacto, etc.",
+    "3card2": "Diseño profesional y personalizado para la marca.",
+    "3card3": "Sección de noticias o blog.",
+    "3card4": "Formulario de contacto.",
+    "3card5": "Galería o portafolio de servicios.",
+    "3card6": "Optimización básica para SEO.",
+    "3card7": "Diseño responsive.",
+
+    "maintenance": "Mantenimiento Web",
+    "4card1": "Actualización de contenido y textos.",
+    "4card2": "Corrección de errores menores o ajustes de diseño.",
+    "4card3": "Rediseño total.",
+    "4card4": "Monitoreo básico del estado del sitio.",
+
+    "other": "Otro",
+    "5card1": "Sitio web especifico (lo que necesites).",
+    "5card2": "Secciones personalizadas.",
+    "5card3": "Diseño responsive.",
+    "5card4": "Optimización SEO básico.",
+
+    "button": "Seleccionar"
+  },
+  "phrase": {
+    "span": "<span>'</span> Yo no programo para solucionar problemas, programo para crear soluciones <span>'</span>"
+  },
+  "footer": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "CTA": "Tener Una Web Importa",
+    "contact": "Contacto",
+    "services": "Servicios",
+    "contactInfo": "Información de contacto",
+    "copyright": "Sitio web de AndrevLare ©2024 Todos los Derechos Reservados"
+  }
+}

@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Colors */
+  --main-black: #0b1215;
+  --transparent-black: #0b121599;
+  --main-white: #fafbfd;
+  --placeholder: #777777;
+  --amethyst: #8b5fbf;
+  --green: #32ee88;
+
+  /* Longitudes */
+  --header-border-bottom-width: 0%;
+}
